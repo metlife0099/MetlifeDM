@@ -67,7 +67,7 @@ const ServicesCont = () => {
     },
     {
       id: 4,
-      name: 'Bob Brown',
+      name: 'Real-Time Tracking – Know where your visitors come from & what they do.',
       description: 'Engineer',
       mainPt1: "❌ No website traffic",
       mainPt2: "❌ Not showing up on Google",
