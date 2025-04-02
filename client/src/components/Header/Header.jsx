@@ -51,53 +51,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const servicesDropdown = [
-    {
-      id: "roof-to-roof",
-      label: "Roof-to-Roof Construction",
-      icon: "🏠",
-      subServices: [
-        { label: "New Construction & Structural Development", path: "/services/roof-to-roof/new-construction" },
-        { label: "Roofing Installation & Repair", path: "/services/roof-to-roof/roofing-installation" },
-        { label: "Residential & Commercial Projects", path: "/services/roof-to-roof/residential-commercial" },
-      ],
-      path: "/services/roof-to-roof",
-    },
-    {
-      id: "property-management",
-      label: "Property Management",
-      icon: "🏢",
-      subServices: [
-        { label: "Rental Property Maintenance", path: "/services/property-management/rental-maintenance" },
-        { label: "Inspections & Compliance", path: "/services/property-management/inspections-compliance" },
-        { label: "Tenant Services & Repairs", path: "/services/property-management/tenant-services" },
-      ],
-      path: "/services/property-management",
-    },
-    {
-      id: "interior-design",
-      label: "Interior Design & Remodeling",
-      icon: "🎨",
-      subServices: [
-        { label: "Kitchen & Bathroom Remodeling", path: "/services/interior-design/kitchen-bathroom" },
-        { label: "Flooring, Cabinets, & Lighting Design", path: "/services/interior-design/flooring-cabinets" },
-        { label: "Custom Interior & Smart Home Upgrades", path: "/services/interior-design/custom-interior" },
-      ],
-      path: "/services/interior-design",
-    },
-    {
-      id: "house-remodeling",
-      label: "House Remodeling & Renovations",
-      icon: "🔨",
-      subServices: [
-        { label: "Complete Home Renovations", path: "/services/house-remodeling/complete-renovations" },
-        { label: "Exterior & Interior Upgrades", path: "/services/house-remodeling/exterior-interior" },
-        { label: "Energy-Efficient & Smart Home Solutions", path: "/services/house-remodeling/smart-home" },
-      ],
-      path: "/services/house-remodeling",
-    },
-  ];
-
   return (
     <header
       className={`fixed w-full z-50 transition-colors duration-300 bg-white shadow-md`}
@@ -128,24 +81,6 @@ const Header = () => {
                   }`}
                 >
                   <span>{link.label}</span>
-                  {link.dropdown && (
-                    <svg
-                      className={`w-4 h-4 transition-transform ${
-                        isServicesHovered ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  )}
                   {/* Sliding Underline */}
                   <span
                     className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#023E8A] transform origin-left transition-transform duration-300 ${
@@ -153,31 +88,6 @@ const Header = () => {
                     }`}
                   ></span>
                 </Link>
-
-                {/* Services Dropdown Mega Menu */}
-                {link.dropdown && isServicesHovered && (
-                  <div
-                    className="absolute top-full left-0 w-[600px] bg-gray-50 shadow-lg rounded-lg mt-2 !p-4 grid grid-cols-2 gap-4"
-                  >
-                    {servicesDropdown.map((service) => (
-                      <div key={service.id} className="flex items-start space-x-4 p-2 hover:bg-gray-100 rounded-lg">
-                        <span className="text-xl">{service.icon}</span>
-                        <div>
-                          <h3 className="font-medium text-[#4c6d66]">{service.label}</h3>
-                          <ul className="mt-2 space-y-1">
-                            {service.subServices.map((subService, index) => (
-                              <li key={index} className="text-sm text-gray-500 mt-3">
-                                <Link to={subService.path} className="hover:text-[#023E8A]">
-                                  * {subService.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
           </nav>
@@ -249,62 +159,6 @@ const Header = () => {
           <div className="flex flex-col items-start h-full !space-y-2 !px-6 !py-3 !mt-[90px] overflow-y-auto">
             {navLinks.map((link) => (
               <div key={link.id} className="w-full border-b border-gray-200">
-                {link.dropdown ? (
-                  <div>
-                    <button
-                      onClick={toggleServicesDropdown}
-                      className={`!px-3 !py-2 text-lg font-medium flex items-center justify-between w-full h-full relative ${
-                        activeLink === link.id
-                          ? "text-[#023E8A]"
-                          : "text-gray-800 hover:text-[#023E8A]"
-                      }`}
-                    >
-                      <span>{link.label}</span>
-                      <svg
-                        className={`w-4 h-4 transition-transform ${
-                          isServicesExpanded ? "rotate-180" : ""
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        isServicesExpanded ? "max-h-[500px]" : "max-h-0"
-                      }`}
-                    >
-                      <div className="!space-y-2 !pl-6">
-                        {servicesDropdown.map((service) => (
-                          <div key={service.id} className="pt-2">
-                            <h3 className="font-medium text-[#4c6d66]">{service.label}</h3>
-                            <ul className="mt-2 !space-y-2">
-                              {service.subServices.map((subService, index) => (
-                                <li key={index} className="text-sm text-gray-500">
-                                  <Link
-                                    to={subService.path}
-                                    className="hover:text-[#023E8A]"
-                                    onClick={handleNavLinkClick}
-                                  >
-                                    {subService.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
                   <Link
                     to={link.path}
                     className={`!px-3 !py-4 text-lg font-medium relative block ${
@@ -316,7 +170,6 @@ const Header = () => {
                   >
                     {link.label}
                   </Link>
-                )}
               </div>
             ))}
             <button className="bg-[#023E8A] text-white !px-6 !py-3 rounded-md hover:bg-orange-700 transition-colors !mt-6">

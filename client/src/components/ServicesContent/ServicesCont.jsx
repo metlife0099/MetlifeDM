@@ -18,7 +18,7 @@ const ServicesCont = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Website design',
+      name: 'Website Development',
       main: "Your website is your business’s digital storefront Isn't it? if YES so ",
       description: 'let’s build your website that works for your business which NOT ONLY look great but also drive traffic, leads, and sales.',
       mainPt1: "❌ A slow, outdated website? 53% of visitors leave in 3 seconds or less!",
@@ -134,6 +134,74 @@ const ServicesCont = () => {
       point3: "Masters in the strategy system that takes you from stuck to unstoppable- fast using Advanced AI.",
       point4: "Our pinpoint accuracy just target your ideal clients, ensuring every dollar you spend hits the right audience.",
     },
+    {
+      id: 8,
+      name: "Content creation",
+      main: "You’re pouring your soul into words, hitting ‘publish’ with big dreams, and then… NOTHING. ",
+      description: 'No clicks, no shares, just a big fat silence staring back at you. Sound like your personal nightmare? because of',
+      mainPt1: "❌ Lack of Engagement in content writing.",
+      mainPt2: "❌ Poor Structure- rambling ideas, no clear beginning or end.",
+      mainPt3: "❌ Overused or Bland Ideas- Rehashing generic topics without a fresh angle.",
+      experience: 'Explore More',
+      image: SocialMedia,
+      popupdesc: "your content shouldn’t be a soul-crushing slog—it should be a WEAPON. We’re talking hooks that stab straight to the heart, lines that make jaws drop, and a secret twist that turns ‘meh’ into ‘MORE. We are exposing the hidden thorn in your side.",
+      
+      point1: "Create Content That Solves Problems.",
+      point2: "Reverse-Engineer about your  audience.",
+      point3: "Find a trending post in your niche, then flip it with your spin.",
+      point4: "Using a plug-and-play structure.",
+    },
+    {
+      id: 9,
+      name: "Weekly plan for SMM",
+      main: "Alright, buckle up—because I’m about to drop a truth bomb ",
+      description: "that’ll make you rethink EVERYTHING about your social media game! You’ve got a weekly plan, you’re posting like a champ, but… where are the leads?  What’s going WRONG? It's because ",
+      mainPt1: "❌ Lack of Strategy- Posting randomly without goals.",
+      mainPt2: "❌ timing and frequency issue- posting at the wrong time or posting late.",
+      mainPt3: "❌ Algorithm Blind Spots- Posts get buried, wasting your effort.",
+      experience: 'Explore More',
+      image: SocialMedia,
+      popupdesc: "Here’s the deal: your weekly plan isn’t broken—it’s just missing the juice! We are about to drop the ultimate fix that’ll turn your plan into a LEAD-GRABBING machine—let’s GO!",
+      
+      point1: "Tailor posts to your audience’s needs—solve their problems!",
+      point2: "Batch-create content to stay consistent.",
+      point3: "Add a bold CTA to every post.",
+      point4: "4. Peek at insights mid-week and tweak what’s off.",
+    },
+    {
+      id: 10,
+      name: "Email, whatsapp and sms marketing ",
+      main: "Are you pouring time, money, and caffeine-fueled creativity into email, WhatsApp, and SMS campaigns ",
+      description: "—only to watch them flop like a bad stand-up routine?The brutal truth? —most of it gets deleted, blocked, or simply ignored. ",
+      mainPt1: "❌ Your emails sit unopened.",
+      mainPt2: "❌ Your WhatsApp messages get ignored.",
+      mainPt3: "❌ Your SMS campaigns feel like they’re vanishing into thin air.",
+      experience: 'Explore More',
+      image: SocialMedia,
+      popupdesc: "We will flip the script with hyper-personalized, curiosity-charged, value-packed messaging that demands attention.No more ghosting. No more wasted leads. Just real engagement and real conversions.",
+      
+      point1: "Email: Avoid spam filters, grab attention with killer subject lines, and use AI-driven automation for higher replies.",
+      point2: "WhatsApp: Use conversational marketing (instead of robotic blasts) to increase response rates by up to 80%.",
+      point3: "SMS: Time-sensitive, action-driven texts that command attention and drive instant clicks.",
+      point4: "Every message feels tailor-made, not generic spam.",
+    },
+    {
+      id: 11,
+      name: "Reputation Management services ",
+      main: "From Trash Talk to Top Rank – Reclaim Your Rep! ",
+      description: "Is your online reputation spiraling into a fiery dumpster of doom? One rogue review, one snarky X post, one viral “They screwed me!” rant—and suddenly, your brand’s name is mud. ",
+      mainPt1: "❌ Fake or angry reviews are scaring away potential customers.",
+      mainPt2: "❌ Your competitors look better online—even if they’re not!",
+      mainPt3: "❌ Google, Yelp, and social media are shaping your brand—without your control.",
+      experience: 'Explore More',
+      image: SocialMedia,
+      popupdesc: "Imagine this: a crack team—or a slick AI-powered system—scouring the web, X, and review sites 24/7, burying the haters with a flood of glowing testimonials, polished responses, and SEO magic.Watch the skeptics turn into superfans.",
+      
+      point1: "Jaw-dropping content.",
+      point2: "trust-building PR hits,",
+      point3: "A real-time crisis control",
+      point4: "Monitor, respond, and protect your reputation—24/7.",
+    },
   ];
 
   const [selectedMember, setSelectedMember] = useState(null);
@@ -183,6 +251,7 @@ const ServicesCont = () => {
               {/* Team Member Details */}
               <div className="mt-4">
                 <h3 className="text-lg font-bold text-gray-800 !my-2">{member.name}</h3>
+                <span className="block w-[150px] h-[4px] bg-blue-600 !my-2"></span>
                 <p className="text-sm text-gray-600"><span className="font-semibold text-gray-700">{member.main}</span> {member.description}</p>
                 <div className="!mt-3">
                 <p className="text-sm text-gray-500 !mt-1">{member.mainPt1}</p>
@@ -237,16 +306,16 @@ const ServicesCont = () => {
             </div>
 
             <div className="flex flex-col !mb-5 gap-2">
-              <p className="flex gap-2 items-center justify-center bg-gray-100 !p-1 rounded-lg"><img src={Check} alt="" className='w-10 h-10' />
+              <p className="flex gap-2 bg-gray-100 !p-1 rounded-lg"><img src={Check} alt="" className='w-10 h-10' />
               {selectedMember.point1}
               </p>
-              <p className="flex gap-2 items-center justify-center"><img src={Check} alt="" className='w-10 h-10' />
+              <p className="flex gap-2"><img src={Check} alt="" className='w-10 h-10' />
               {selectedMember.point2}
               </p>
-              <p className="flex gap-2 items-center justify-center bg-gray-100 !p-1 rounded-lg"><img src={Check} alt="" className='w-10 h-10' />
+              <p className="flex gap-2 bg-gray-100 !p-1 rounded-lg"><img src={Check} alt="" className='w-10 h-10' />
               {selectedMember.point3}
               </p>
-              <p className="flex gap-2 items-center justify-center"><img src={Check} alt="" className='w-10 h-10' />
+              <p className="flex gap-2"><img src={Check} alt="" className='w-10 h-10' />
               {selectedMember.point4}
               </p>
             </div>
@@ -256,7 +325,7 @@ const ServicesCont = () => {
                 to="/contact" // Replace with your contact page route
                 className="w-full border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all"
               >
-                Ask us How!
+                Send us Inquiry
               </Link>
             </div>
           </div>
