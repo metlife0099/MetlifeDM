@@ -28,7 +28,8 @@ const Footer = () => {
           <div className="!space-y-4">
             <h2>Metlife Dm</h2>
             <p className="text-white">
-              Your trusted partner for construction, remodeling, and property management services.
+              Ready to Grow with Metlifedm LLC? 
+              Based in the U.S., Serving the Nation
             </p>
             <div className="flex !space-x-4">
               <Link
@@ -178,7 +179,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-[#5c7c3b] !pt-8 text-center">
           <p className="text-white">
-            &copy; {new Date().getFullYear()} Metlife DM. All rights reserved.
+            &copy; 2025 Metlifedm LLC – Digital Marketing Experts for U.S. Businesses
           </p>
         </div>
       </div>

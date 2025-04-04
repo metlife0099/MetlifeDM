@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hero = ({serviceHero, contactHero}) => {
-  const heroContent = serviceHero || contactHero;
+const Hero = ({serviceHero, contactHero, FAQHero}) => {
+  const heroContent = serviceHero || contactHero || FAQHero;
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}

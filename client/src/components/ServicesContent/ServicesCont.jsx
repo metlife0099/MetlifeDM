@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import { FaEye, FaTimes } from 'react-icons/fa';
-import Profile1 from '../../assets/images/profile3.jpg';
-import Profile2 from '../../assets/images/profile4.jpg';
-import Profile3 from '../../assets/images/profile5.jpg';
-import Profile4 from '../../assets/images/profile7.jpg';
-
 import Website from '../../assets/images/website.gif';
 import SEO from '../../assets/images/seo.gif';
 import GoogleAds from '../../assets/images/google.gif';
@@ -21,9 +16,9 @@ const ServicesCont = () => {
       name: 'Website Development',
       main: "Your website is your business’s digital storefront Isn't it? if YES so ",
       description: 'let’s build your website that works for your business which NOT ONLY look great but also drive traffic, leads, and sales.',
-      mainPt1: "❌ A slow, outdated website? 53% of visitors leave in 3 seconds or less!",
-      mainPt2: "❌ Not mobile-friendly? You’re losing 70% of potential buyers!",
-      mainPt3: "❌ Unprofessional web design = 100% No trust",
+      mainPt1: "❌ Did you know? 53% of visitors leave in 3 seconds or less! if your website is slow or outdated.",
+      mainPt2: "❌ You’re losing 70% of potential buyers! because your website is not mobile friendly.",
+      mainPt3: "❌ 100% there is NO CLIENT TRUST if your website is unprofessional",
       experience: 'Explore More',
       image: Website,
       popupdesc: "We don't just build website. We create SALES - DRIVEN MACHINE that turn's your visitors into PAYING CLIENTS!",
@@ -121,7 +116,7 @@ const ServicesCont = () => {
       id: 7,
       name: "Brand Awarness",
       main: "Did you know 87% of potential clients scroll past your business ",
-      description: 'without a second glance and the business fails because of outdated brand awareness marketing strategies. It means a total waste of your money because of',
+      description: 'without a second glance and the business fails because of outdated brand awareness marketing strategies. It means a total waste of your money because',
       mainPt1: "❌ No proper branding marketing strategy.",
       mainPt2: "❌ Spending thousands on outdated technology and strategy  for zero result.",
       mainPt3: "❌ Remember your competitors are using a cutting-edge strategy to steal the spotlight and you are stuck with outdated technology.",

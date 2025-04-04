@@ -53,7 +53,7 @@ const HomeCards = () => {
             At Metlifedm, we don’t just market—we drive real, measurable growth. Our data-driven strategies ensure your business stands out in the competitive US market.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[30px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] !mx-5 xl:!mx-0">
           {aboutCard.map((item, index) => (
             <div 
               key={index} 
