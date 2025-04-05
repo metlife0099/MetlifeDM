@@ -1,5 +1,6 @@
 // AboutCards.jsx
 import React from "react";
+import CardBg from '../../assets/images/aboutBg.jpg'
 
 const AboutCards = () => {
   // Sample data
@@ -32,13 +33,18 @@ const AboutCards = () => {
 
   return (
     <section
-      className="relative !py-20 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop')] !bg-cover !bg-fixed !bg-center"
+      className="relative !py-20"
       style={{
-        backgroundAttachment: 'fixed !important',
+        backgroundImage: `url(${CardBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh' // Add this to ensure section has height
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black !bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
 
       <div className="relative z-10 container !mx-auto">
         {/* Section header */}
@@ -77,8 +83,8 @@ const AboutCards = () => {
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-blue-500 group-hover:!w-3/4 !transition-all !duration-500"></div>
               </div>
 
-               {/* Vertical divider - shows only between cards on lg screens */}
-               {index !== cardsData.length -1 && (
+              {/* Vertical divider - shows only between cards on lg screens */}
+              {index !== cardsData.length - 1 && (
                 <div className="hidden lg:flex items-center justify-center">
                   <div className="h-3/4 w-px bg-gray-400"></div>
                 </div>
