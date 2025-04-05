@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hero = ({serviceHero, contactHero, FAQHero}) => {
-  const heroContent = serviceHero || contactHero || FAQHero;
+const Hero = ({serviceHero, contactHero, FAQHero, AboutHero, PricingHero}) => {
+  const heroContent = serviceHero || contactHero || FAQHero || AboutHero || PricingHero;
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -27,3 +27,5 @@ const Hero = ({serviceHero, contactHero, FAQHero}) => {
 };
 
 export default Hero;
+
+

@@ -1,6 +1,8 @@
 import ServiceHeroImage from "../images/serviceHero.jpg";
 import contactHeroImage from "../images/contactHero.jpg";
 import FAQHeroImage from "../images/faqHero.jpg";
+import AboutHeroImage from "../images/aboutHero.jpg";
+import PricingHeroImage from "../images/pricingHero.jpg";
 
 export const serviceHero = {
   id: 1,
@@ -24,4 +26,18 @@ export const FAQHero = {
   description:
     "We are dedicated to creating spaces that inspire and endure. With a passion for design and a commitment to quality, we bring your vision to life.",
   HeroImage: FAQHeroImage,
+};
+export const AboutHero = {
+  id: 4,
+  title: "Who we are",
+  description:
+    "Welcome to Metlifedm LLC, where your digital growth isn’t just a promise—it’s a freakin’ explosion waiting to happen!",
+  HeroImage: AboutHeroImage,
+};
+export const PricingHero = {
+  id: 4,
+  title: "See are Pricing",
+  description:
+    "Welcome to Metlifedm LLC, where your digital growth isn’t just a promise—it’s a freakin’ explosion waiting to happen!",
+  HeroImage: PricingHeroImage,
 };

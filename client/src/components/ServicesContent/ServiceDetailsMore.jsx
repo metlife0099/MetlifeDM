@@ -115,8 +115,8 @@ const ServicesDetailsMore = () => {
 
   return (
     <section className="!pb-8">
-      <div className="container !mx-auto !px-4">
-        <div className="flex flex-col md:flex-row !gap-6 !p-4 md:!p-8">
+      <div className="container !mx-auto">
+        <div className="flex flex-col md:flex-row !gap-6 !p-5 md:!p-4 bg-gray-100">
           {/* Mobile Select Dropdown */}
           {isMobile && (
             <div className="w-full !mb-4 relative" ref={dropdownRef}>
@@ -172,7 +172,7 @@ const ServicesDetailsMore = () => {
           {/* Content Section */}
           <div className="w-full md:!w-2/3 !relative">
             <div
-              className={`!bg-white !rounded-xl !shadow-xl !overflow-hidden !transition-all !duration-500 ${
+              className={`!bg-white !rounded-xl !overflow-hidden !transition-all !duration-500 ${
                 animate ? '!scale-95 !opacity-80' : '!scale-100 !opacity-100'
               }`}
             >
@@ -218,10 +218,10 @@ const ServicesDetailsMore = () => {
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`w-full !text-left !p-4 !rounded-lg !transition-all !duration-300 ${
+                  className={`w-full !text-left !p-4 !rounded-lg !transition-all !duration-300 cursor-pointer ${
                     activeTab === index
                       ? '!bg-gradient-to-r !from-blue-500 !to-purple-600 !text-white !shadow-lg'
-                      : '!bg-gray-100 hover:!bg-gray-200 !text-gray-800'
+                      : '!bg-gray-200 hover:!bg-gray-200 !text-gray-800'
                   }`}
                 >
                   <h3 className="!font-semibold">{service.title}</h3>

@@ -1,6 +1,6 @@
 // src/FAQ.js
 import React, { useState } from 'react';
-import FAQimg from '../../assets/images/faq.jpg'
+import FAQimg from '../../assets/images/faq.gif'
 import { FaEye } from "react-icons/fa";
 
 const faqData = [
@@ -63,7 +63,7 @@ const FAQ = () => {
         <div className="flex flex-col items-center gap-10 justify-between md:flex-row !mx-5">
 
           <div className="flex-1 ">
-            <img src={FAQimg} className='w-full rounded-md' alt="" />
+            <img src={FAQimg} className='w-full rounded-md border-2 border-green-400' alt="" />
           </div>
 
           <div className="flex-1 !space-y-4">

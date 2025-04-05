@@ -5,10 +5,9 @@ import Header from './components/Header/Header'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Footer from './components/Footer/Footer'
-import PaymentGateway from './components/Others/PaymentGateway'
-import PaymentStatus from './components/Others/PaymentStatus'
 import FAQ from './pages/FAQ'
 import About from './pages/About'
+import Pricing from './pages/Pricing'
 
 const App = () => {
   return (
@@ -19,11 +18,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
-
-        <Route path="/pay" element={<PaymentGateway />} />
-        <Route path="/payment-status" element={<PaymentStatus />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
       </BrowserRouter>
