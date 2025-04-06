@@ -17,7 +17,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, Testi
   }, [controls]);
 
   return (
-    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden !bg-blue-900">
+    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden !bg-blue-500">
       {/* Background Image with Parallax Effect */}
       <motion.div
         className="absolute inset-0 w-full h-[80vh] bg-cover bg-center"
@@ -29,7 +29,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, Testi
       >
         {/* Blue Gradient Overlay */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/60 to-indigo-900/80"
+          className="absolute inset-0 bg-gradient-to-br from-blue-500/50 via-blue-400/30 to-indigo-500/50"
           initial={{ opacity: 0.7 }}
           animate={{ opacity: isHovered ? 0.9 : 0.7 }}
           transition={{ duration: 0.5 }}
@@ -101,7 +101,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, Testi
                 boxShadow: "0 10px 25px -5px rgba(96, 165, 250, 0.3) !important"
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white/10 backdrop-blur-sm text-white font-bold !py-3 !px-8 rounded-full border border-white/20 shadow-lg hover:bg-white/20 !transition-all flex items-center gap-2 cursor-pointer"
+              className="bg-white/10 backdrop-blur-sm text-white font-bold !py-3 !px-8 rounded-full border border-white/20 shadow-lg hover:bg-white/20 !transition-all flex items-center gap-2 cursor-pointer "
             >
               Get Start <MdSwipeRightAlt className='text-2xl text-blue-600' />
             </motion.button>

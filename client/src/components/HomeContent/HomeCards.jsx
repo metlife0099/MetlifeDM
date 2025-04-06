@@ -67,14 +67,16 @@ const HomeCards = () => {
           viewport={{ once: true }}
           className="text-center !mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 !mb-6 relative inline-block">
-            <span className="absolute -left-2 top-1/2 w-8 h-1 bg-indigo-500 transform -translate-y-1/2"></span>
-            Why Partner With Metlifedm?
-            <span className="absolute -right-2 top-1/2 w-8 h-1 bg-indigo-500 transform -translate-y-1/2"></span>
+
+        <div className="text-center !mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
+            Why partner with <span className="text-blue-600">Metlifedm?</span>
           </h2>
-          <p className="text-lg text-gray-600 !mb-8 max-w-2xl !mx-auto">
-            At Metlifedm, we don't just market—we drive real, measurable growth. Our data-driven strategies ensure your business stands out in the competitive US market.
+          <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
+          At Metlifedm, we don't just market—we drive real, measurable growth. Our data-driven strategies ensure your business stands out in the competitive US market.
           </p>
+        </div>
+
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,7 +100,7 @@ const HomeCards = () => {
                     <img 
                       src={item.icon} 
                       alt={item.title} 
-                      className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-0 group-hover:invert" 
+                      className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-0 group-hover:invert !mb-2" 
                     />
                   </div>
                   
@@ -109,21 +111,6 @@ const HomeCards = () => {
                   <p className="text-gray-600 flex-grow group-hover:text-white/90 transition-colors duration-300">
                     {item.description}
                   </p>
-                  
-                  <div className="mt-6 pt-6 border-t border-gray-200 group-hover:border-white/30 transition-colors duration-300">
-                    <button className="text-indigo-600 font-medium group-hover:text-white transition-colors duration-300 flex items-center">
-                      Learn more
-                      <svg 
-                        className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform duration-300" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                      </svg>
-                    </button>
-                  </div>
                 </div>
               </div>
             </motion.div>

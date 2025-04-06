@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 !mb-8">
           {/* First Column: Logo, Description, and Social Media Icons */}
           <div className="!space-y-4">
-            <h2>Metlife Dm</h2>
+            <h2 className='text-4xl text-blue-600 font-bold'>Metlife Dm</h2>
             <p className="text-white">
               Ready to Grow with Metlifedm LLC? 
               Based in the U.S., Serving the Nation
@@ -36,7 +36,7 @@ const Footer = () => {
                 to="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
+                className="text-white hover:text-blue-500 transition-all transform hover:scale-110"
               >
                 <FaFacebook className="w-6 h-6" />
               </Link>
@@ -44,7 +44,7 @@ const Footer = () => {
                 to="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
+                className="text-white hover:text-blue-500 transition-all transform hover:scale-110"
               >
                 <FaTwitter className="w-6 h-6" />
               </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
                 to="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
+                className="text-white hover:text-blue-500 transition-all transform hover:scale-110"
               >
                 <FaInstagram className="w-6 h-6" />
               </Link>
@@ -60,7 +60,7 @@ const Footer = () => {
                 to="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-[#5c7c3b] transition-all transform hover:scale-110"
+                className="text-white hover:text-blue-500 transition-all transform hover:scale-110"
               >
                 <FaLinkedin className="w-6 h-6" />
               </Link>
@@ -69,42 +69,42 @@ const Footer = () => {
 
           {/* Second Column: Services */}
           <div className="!space-y-4">
-            <h3 className="text-xl font-semibold text-[#5c7c3b]">Quick Links</h3>
-            <span className="block w-[100px] h-[4px] bg-[#5c7c3b] !my-3"></span>
+            <h3 className="text-xl font-semibold text-blue-500">Quick Links</h3>
+            <span className="block w-[100px] h-[4px] bg-blue-500 !my-3"></span>
             <ul className="!space-y-2">
               <li>
                 <Link
                   to="/"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaHammer className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaHammer className="w-4 h-4 text-blue-500" />
                   <span>Home</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/about"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaHome className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaHome className="w-4 h-4 text-blue-500" />
                   <span>About Us</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaPaintRoller className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaPaintRoller className="w-4 h-4 text-blue-500" />
                   <span>Services</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/contact"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaBuilding className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaBuilding className="w-4 h-4 text-blue-500" />
                   <span>Contact Us</span>
                 </Link>
               </li>
@@ -113,42 +113,42 @@ const Footer = () => {
 
           {/* Third Column: Important Links */}
           <div className="!space-y-4">
-            <h3 className="text-xl font-semibold text-[#5c7c3b]">Important Links</h3>
-            <span className="block w-[100px] h-[4px] bg-[#5c7c3b] !my-3"></span>
+            <h3 className="text-xl font-semibold text-blue-500">Important Links</h3>
+            <span className="block w-[100px] h-[4px] bg-blue-500 !my-3"></span>
             <ul className="!space-y-2">
               <li>
                 <Link
                   to="/privacy-policy"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaShieldAlt className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaShieldAlt className="w-4 h-4 text-blue-500" />
                   <span>Privacy Policy</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/terms-and-conditions"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaFileContract className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaFileContract className="w-4 h-4 text-blue-500" />
                   <span>Terms & Conditions</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/faq"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaQuestionCircle className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaQuestionCircle className="w-4 h-4 text-blue-500" />
                   <span>FAQ</span>
                 </Link>
               </li>
               <li>
                 <Link
                   to="/blog"
-                  className="text-white hover:text-[#5c7c3b] transition-all flex items-center !space-x-2"
+                  className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
-                  <FaBlog className="w-4 h-4 text-[#5c7c3b]" />
+                  <FaBlog className="w-4 h-4 text-blue-500" />
                   <span>Blog</span>
                 </Link>
               </li>
@@ -157,19 +157,19 @@ const Footer = () => {
 
           {/* Fourth Column: Contact Info */}
           <div className="!space-y-4">
-            <h3 className="text-xl font-semibold text-[#5c7c3b]">Contact Info</h3>
-            <span className="block w-[100px] h-[4px] bg-[#5c7c3b] !my-3"></span>
+            <h3 className="text-xl font-semibold text-blue-500">Contact Info</h3>
+            <span className="block w-[100px] h-[4px] bg-blue-500 !my-3"></span>
             <ul className="!space-y-4">
               <li className="flex items-center !space-x-3">
-                <FaPhoneAlt className="text-[#5c7c3b] w-5 h-5" />
+                <FaPhoneAlt className="text-blue-500 w-5 h-5" />
                 <span className="text-white">+17862109819</span>
               </li>
               <li className="flex items-center !space-x-3">
-                <FaEnvelope className="text-[#5c7c3b] w-5 h-5" />
+                <FaEnvelope className="text-blue-500 w-5 h-5" />
                 <span className="text-white">letsbuit@ar.miami</span>
               </li>
               <li className="flex items-center !space-x-3">
-                <FaMapMarkerAlt className="text-[#5c7c3b] w-5 h-5" />
+                <FaMapMarkerAlt className="text-blue-500 w-5 h-5" />
                 <span className="text-white">1717 N bayshore dr , #108 miami FL 33132</span>
               </li>
             </ul>
@@ -177,7 +177,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-[#5c7c3b] !pt-8 text-center">
+        <div className="border-t border-blue-500 !pt-8 text-center">
           <p className="text-white">
             &copy; 2025 Metlifedm LLC – Digital Marketing Experts for U.S. Businesses
           </p>

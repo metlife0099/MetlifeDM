@@ -41,23 +41,25 @@ const FAQ = () => {
   };
 
   return (
-    <section className="!py-16 bg-gradient-to-br from-indigo-50 to-teal-50">
+    <section className="!py-16 bg-gray-100">
       <div className="container !mx-auto !px-4 sm:!px-6 lg:!px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center !mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 !mb-6 relative inline-block">
-            <span className="absolute -left-2 top-1/2 w-6 h-1 bg-indigo-500 transform -translate-y-1/2"></span>
-            Frequently Asked Questions
-            <span className="absolute -right-2 top-1/2 w-6 h-1 bg-indigo-500 transform -translate-y-1/2"></span>
-          </h2>
-          <p className="text-lg text-gray-600 !mb-8 max-w-2xl !mx-auto">
-            Get answers to your most pressing questions about our digital marketing services
-          </p>
+
+          <div className="text-center !mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
+              Frequently <span className="text-blue-600">asked questions</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
+              Get answers to your most pressing questions about our digital marketing services
+            </p>
+          </div>
+
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center !gap-8 lg:!gap-12">
@@ -68,10 +70,10 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2"
           >
-            <img 
-              src={FAQimg} 
-              className="w-full rounded-xl shadow-xl border-4 border-white transform hover:scale-[1.02] transition-all duration-300" 
-              alt="FAQ illustration" 
+            <img
+              src={FAQimg}
+              className="w-full rounded-xl shadow-xl border-4 border-white transform hover:scale-[1.02] transition-all duration-300"
+              alt="FAQ illustration"
             />
           </motion.div>
 
@@ -87,12 +89,12 @@ const FAQ = () => {
                 key={index}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-white !p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex justify-between items-center border-l-4 border-indigo-400"
+                className="bg-white !p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex justify-between items-center border-l-4 border-blue-400"
               >
                 <p className="text-lg font-semibold text-gray-800">{faq.question}</p>
                 <button
                   onClick={() => handleQuestionClick(index)}
-                  className="text-indigo-600 hover:text-indigo-800 transition-all"
+                  className="text-blue-600 hover:text-blue-800 transition-all"
                 >
                   <FaEye className="w-5 h-5 cursor-pointer hover:scale-125 transition-transform" />
                 </button>
@@ -115,12 +117,12 @@ const FAQ = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-xl !p-8 max-w-2xl w-full !mx-4 relative shadow-2xl border-t-4 border-indigo-500"
+              className="bg-white rounded-xl !p-8 max-w-2xl w-full !mx-4 relative shadow-2xl border-t-4 border-blue-500"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-all"
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-all cursor-pointer"
               >
                 <FaTimes className="w-6 h-6" />
               </button>
@@ -133,7 +135,7 @@ const FAQ = () => {
               <div className="mt-6 pt-6 border-t border-gray-200 flex justify-end">
                 <button
                   onClick={closeModal}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium !py-2 !px-6 rounded-lg transition-all"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium !py-2 !px-6 rounded-lg transition-all cursor-pointer"
                 >
                   Got it!
                 </button>

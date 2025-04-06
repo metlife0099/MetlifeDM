@@ -75,7 +75,7 @@ const HomeWebContent = () => {
         {/* Header */}
         <div className="text-center !mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
-            Build Amazing Websites <span className="text-blue-600">Easily</span>
+            Build amazing <span className="text-blue-600">websites easily</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
             Our platform makes website creation as simple as WordPress and Shopify, but with the power of custom development.

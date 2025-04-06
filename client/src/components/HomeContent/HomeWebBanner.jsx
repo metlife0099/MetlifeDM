@@ -285,7 +285,7 @@ const HomeWebBanner = () => {
                 whileHover={{ rotate: 90, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsLearnModalOpen(false)}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 cursor-pointer"
               >
                 <FaTimes className="w-6 h-6" />
               </motion.button>
@@ -318,7 +318,7 @@ const HomeWebBanner = () => {
                       setIsLearnModalOpen(false);
                       setIsContactModalOpen(true);
                     }}
-                    className="bg-blue-600 hover:bg-blue-800 text-white font-bold !py-3 !px-8 rounded-lg transition-all duration-300"
+                    className="bg-blue-600 hover:bg-blue-800 text-white font-bold !py-3 !px-8 rounded-lg transition-all duration-300 cursor-pointer"
                   >
                     Get Started with CMF
                   </motion.button>

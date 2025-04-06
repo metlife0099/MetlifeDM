@@ -255,7 +255,7 @@ const ServicesCont = () => {
 
                 {/* Eye Icon in Bottom-Right Corner */}
                 <div
-                  className="absolute bottom-4 right-4 text-[#5c7c3b] hover:text-[#03045E] cursor-pointer !mt-5"
+                  className="absolute bottom-4 right-4 text-blue-500 hover:text-blue-700 transition-all cursor-pointer !mt-5"
                   onClick={() => handleMemberClick(member)}
                 >
                   <FaEye className="w-6 h-6" />
@@ -279,7 +279,7 @@ const ServicesCont = () => {
           >
             {/* Close Button Inside Modal */}
             <button
-              className="absolute top-4 right-4 text-[#5c7c3b] hover:text-[#03045E] cursor-pointer"
+              className="absolute top-4 right-4 text-blue-500 hover:text-blue-700 cursor-pointer"
               onClick={closePopup}
             >
               <FaTimes className="w-6 h-6" />
@@ -316,7 +316,7 @@ const ServicesCont = () => {
             <div className="w-full">
             <Link
                 to="/contact" // Replace with your contact page route
-                className="w-full border-2 !py-2 !px-4 border-[#5c7c3b] font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-[#5c7c3b] hover:text-white transition-all"
+                className="w-full border-2 !py-2 !px-4 border-blue-500 font-semibold !mt-10 rounded-lg cursor-pointer hover:bg-blue-700 hover:text-white transition-all"
               >
                 Send us Inquiry
               </Link>
