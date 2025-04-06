@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import { MdSwipeRightAlt } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
-const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero }) => {
-  const heroContent = serviceHero || contactHero || FAQHero || AboutHero || PricingHero;
+const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, TestimonialHero }) => {
+  const heroContent = serviceHero || contactHero || FAQHero || AboutHero || PricingHero || TestimonialHero;
   const controls = useAnimation();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -15,7 +17,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero }) => 
   }, [controls]);
 
   return (
-    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden !bg-blue-900">
       {/* Background Image with Parallax Effect */}
       <motion.div
         className="absolute inset-0 w-full h-[80vh] bg-cover bg-center"
@@ -25,14 +27,14 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero }) => 
         transition={{ duration: 1.5, ease: "easeOut" }}
         whileHover={{ scale: 1.05 }}
       >
-        {/* Gradient Overlay */}
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-indigo-900/70 via-teal-800/50 to-emerald-900/70"
+        {/* Blue Gradient Overlay */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/60 to-indigo-900/80"
           initial={{ opacity: 0.7 }}
           animate={{ opacity: isHovered ? 0.9 : 0.7 }}
           transition={{ duration: 0.5 }}
         />
-        
+
         {/* Animated Particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(15)].map((_, i) => (
@@ -63,7 +65,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero }) => 
       </motion.div>
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         className="relative z-10 text-center !px-5 lg:!px-0"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
@@ -74,38 +76,36 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero }) => 
           className="text-4xl sm:text-5xl md:text-6xl font-bold !mb-6 text-white drop-shadow-lg"
           whileHover={{ scale: 1.02 }}
         >
-          <span className="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
             {heroContent?.title}
           </span>
         </motion.h2>
-        
+
         <motion.p
           className="text-xl sm:text-2xl md:text-3xl text-white/90 max-w-4xl mx-auto !mb-8 leading-relaxed"
           whileHover={{ scale: 1.01 }}
         >
           {heroContent?.description}
         </motion.p>
-        
+
         <motion.div
-          className="flex justify-center gap-4"
+          className="flex justify-center !gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(16, 185, 129, 0.3)" }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-teal-500 to-emerald-600 text-white font-bold !py-3 !px-8 rounded-full shadow-lg"
-          >
-            Get Started
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(255, 255, 255, 0.3)" }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white/10 backdrop-blur-sm text-white font-bold !py-3 !px-8 rounded-full border border-white/20 shadow-lg hover:bg-white/20"
-          >
-            Learn More
-          </motion.button>
+          <Link to='/contact'>
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 25px -5px rgba(96, 165, 250, 0.3) !important"
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white/10 backdrop-blur-sm text-white font-bold !py-3 !px-8 rounded-full border border-white/20 shadow-lg hover:bg-white/20 !transition-all flex items-center gap-2 cursor-pointer"
+            >
+              Get Start <MdSwipeRightAlt className='text-2xl text-blue-600' />
+            </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
 
@@ -121,9 +121,9 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero }) => 
           ease: "easeInOut"
         }}
       >
-        <div className="w-6 h-10 border-2 border-emerald-400 rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
           <motion.div
-            className="w-1 h-2 bg-emerald-400 rounded-full !mt-1"
+            className="w-1 h-2 bg-blue-400 rounded-full !mt-1"
             animate={{
               y: [0, 4, 0],
               opacity: [0.6, 1, 0.6]

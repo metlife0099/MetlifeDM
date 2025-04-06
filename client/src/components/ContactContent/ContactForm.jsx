@@ -62,7 +62,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <div className="bg-white !p-8 rounded-2xl shadow-xl">
               <h2 className="text-3xl font-bold text-gray-800 !mb-2">Have any questions?</h2>
-              <p className="text-lg text-emerald-600 !mb-8">
+              <p className="text-lg text-blue-600 !mb-8">
                 Fill out the form, and we'll get back to you within 24 hours.
               </p>
 
@@ -81,7 +81,7 @@ const ContactForm = () => {
                         name="name"
                         type="text"
                         required
-                        className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="John Doe"
                       />
                     </div>
@@ -100,7 +100,7 @@ const ContactForm = () => {
                         name="pnumber"
                         type="tel"
                         required
-                        className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:blue-emerald-500"
                         placeholder="+1 555-555-5555"
                       />
                     </div>
@@ -120,7 +120,7 @@ const ContactForm = () => {
                       name="email"
                       type="email"
                       required
-                      className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                      className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       placeholder="youremail@example.com"
                     />
                   </div>
@@ -137,7 +137,7 @@ const ContactForm = () => {
                     <select
                       id="service" 
                       name="service" 
-                      className="!pl-10 !pr-4 !py-3 border border-gray-300 rounded-lg w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent appearance-none cursor-pointer"
+                      className="!pl-10 !pr-4 !py-3 border border-gray-300 rounded-lg w-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none cursor-pointer"
                     >
                       <option value="">Select a service</option>  {/* Added empty default option */}
                       <option value="Web Development">Web Development</option>
@@ -171,7 +171,7 @@ const ContactForm = () => {
                     name="comment"
                     rows={4}
                     required
-                    className="block w-full !px-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="block w-full !px-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Tell us about your project..."
                   ></textarea>
                 </div>
@@ -180,7 +180,7 @@ const ContactForm = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full flex justify-center items-center !py-3 !px-4 border border-transparent rounded-lg shadow-sm text-white font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 ${isSubmitting ? 'bg-emerald-400' : 'bg-emerald-600 hover:bg-emerald-700'}`}
+                    className={`w-full flex justify-center items-center !py-3 !px-4 border border-transparent rounded-lg shadow-sm text-white font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 ${isSubmitting ? 'bg-blue-400' : 'bg-blue-600 hover:bg-blue-700'}`}
                   >
                     {isSubmitting ? (
                       <>
@@ -227,7 +227,7 @@ const ContactForm = () => {
             <div className="inline-block align-bottom bg-white rounded-lg !px-4 !pt-5 !pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:!my-8 sm:align-middle sm:max-w-sm sm:w-full sm:!p-6">
               <div>
                 <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-emerald-100">
-                  <HiCheckCircle className="h-6 w-6 text-emerald-600" />
+                  <HiCheckCircle className="h-6 w-6 text-blue-600" />
                 </div>
                 <div className="mt-3 text-center sm:mt-5">
                   <h3 className="text-lg leading-6 font-medium text-gray-900">Message Sent!</h3>
@@ -241,7 +241,7 @@ const ContactForm = () => {
               <div className="!mt-5 sm:!mt-6">
                 <button
                   type="button"
-                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm !px-4 !py-2 bg-emerald-600 text-base font-medium text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 sm:text-sm"
+                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm !px-4 !py-2 bg-emerald-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm"
                   onClick={() => setIsModalOpen(false)}
                 >
                   Close

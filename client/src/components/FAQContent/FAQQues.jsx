@@ -74,28 +74,28 @@ const FAQQues = () => {
   return (
     <div className="!py-12 !px-4 lg:!px-8 bg-gray-100">
       <div className="container mx-auto">
-        <div className="text-center !mb-18">
-          <h2 className="text-2xl sm:text-4xl font-bold text-gray-800 !mb-4">
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1 sm:!mb-2.5 !mr-1"></span>
-            FAQs
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1 sm:!mb-2.5 !ml-1"></span>
+
+        <div className="!text-center !mb-16">
+          <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
+          Frequently <span className="!text-blue-500">asked questions </span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12">
-            Frequently Asked Questions
+          <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
+          Got questions? we've got power-packed answers!
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="bg-white !p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex justify-between items-center"
+              className="bg-white !p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex justify-between items-center border-l-4 border-indigo-400"
             >
               <p className="text-lg font-medium text-gray-800">{faq.question}</p>
               <button
                 onClick={() => handleQuestionClick(index)}
-                className="text-gray-600 hover:text-[#5c7c3b] transition-all transform hover:scale-110"
+                className="text-indigo-600 hover:text-indigo-800 transition-all transform hover:scale-110"
               >
-                <FaEye className="w-6 h-6 text-[#5c7c3b] cursor-pointer" />
+                <FaEye className="w-6 h-6 text-blue-600 cursor-pointer" />
               </button>
             </div>
           ))}
@@ -117,7 +117,7 @@ const FAQQues = () => {
           >
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-[#5c7c3b] hover:text-[#2b4d2f] transition-all transform hover:scale-110 cursor-pointer"
+              className="absolute top-4 right-4 text-indigo-600 hover:text-indigo-800 transition-all transform hover:scale-110 cursor-pointer"
             >
               <svg
                 className="w-6 h-6"

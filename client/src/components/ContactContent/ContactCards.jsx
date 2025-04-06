@@ -43,14 +43,15 @@ const ContactCards = () => {
   return (
     <section className="!py-12 !px-4 sm:!px-6 lg:!px-8 bg-gray-50">
       <div className="container">
-        <h2 className="text-center text-2xl sm:text-4xl font-bold text-gray-800 !mb-4">
-          <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1 sm:!mb-2.5 !mr-1"></span>
-          Contact Information
-          <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#5c7c3b] !mb-1 sm:!mb-2.5 !mr-1"></span>
-        </h2>
-        <p className="text-lg text-center text-gray-600 !mb-12 max-w-2xl !mx-auto">
+        
+        <div className="!text-center !mb-16">
+          <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
+          Get in <span className="!text-blue-500">touch</span> now
+          </h2>
+          <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
           Get in touch with us through any of these channels
-        </p>
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {cards.map((card, index) => (

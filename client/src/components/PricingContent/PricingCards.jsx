@@ -4,8 +4,9 @@ const PricingCards = () => {
   const services = {
     'web dev': 'Web Development',
     'SEO': 'Search Engine Optimization',
-    'SMM': 'Social Media Marketing',
+    'GAA': 'Google Ads & Analytics',
     'PPC': 'Pay-Per-Click Advertising',
+    'SMM': 'Social Media Marketing',
     'SSM': 'Server & Site Maintenance',
     'Content Wrt': 'Content Writing'
   };
@@ -76,15 +77,21 @@ const PricingCards = () => {
       {
         name: 'Pro Business Seo',
         price: '$899/mo',
-        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Setup your Google My Business (GMB) profile for SEO', 'Website technical audit','Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 180 FREE promotional emails worth $899','+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month', 'FREE sample pack for reputation management service',],
+        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Setup your Google My Business (GMB) profile for SEO', 'Website technical audit','Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 180 FREE promotional emails worth $899','+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month', 'FREE sample pack for reputation management service worth $99',],
+        popular: true
+      },
+      {
+        name: 'E-commerce SEO',
+        price: '$1599/mo',
+        features: ['Large-scale keyword targeting (products/categories)', 'On-page SEO (titles, meta, alt tags)', 'SEO for 100+ product pages Schema markup for rich snippets Technical SEO for product filters, pagination', 'Website technical audit','Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Product feed optimization for Google Shopping', 'Backlink strategy for products and categories', 'Local directory submissions', 'Conversion rate optimization (CRO)', 'Ongoing competitor/product tracking Blog & content marketing','Detailed monthly analytics + revenue tracking', '+ 320 FREE promotional emails worth $1599','+ FREE website optimization for fast loading time worth $350', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '3 reports/month', 'FREE sample pack for reputation management service worth $149',],
         popular: false
       },
     ],
-    'SMM': [
+    'GAA': [
       {
-        name: 'Basic Management',
-        price: '$399/mo',
-        features: ['2 platforms', '12 posts/month', 'Content creation', 'Basic analytics', 'Community engagement'],
+        name: 'Start-up package',
+        price: '$299/mo',
+        features: ['Google Ads account setup (one-time setup + $499)', '1 Campaign (Search or Display)', 'Monthly Ads management (client business marketing budget)', 'Google Analytics (GA4) + Tag Manager basic setup', '1 monthly performance report (PDF or email)'],
         popular: false
       },
       {
@@ -120,6 +127,27 @@ const PricingCards = () => {
         popular: false
       }
     ],
+    'SMM': [
+      {
+        name: 'Basic Management',
+        price: '$399/mo',
+        features: ['2 platforms', '12 posts/month', 'Content creation', 'Basic analytics', 'Community engagement'],
+        popular: false
+      },
+      {
+        name: 'Growth Package',
+        price: '$799/mo',
+        features: ['4 platforms', '24 posts/month', 'Content strategy', 'Advanced analytics', 'Ad management'],
+        popular: true
+      },
+      {
+        name: 'Premium Package',
+        price: '$1299/mo',
+        features: ['All platforms', 'Daily posting', 'Influencer collabs', 'Video content', 'Crisis management'],
+        popular: false
+      }
+    ],
+    
     'SSM': [
       {
         name: 'Basic Maintenance',
@@ -179,12 +207,12 @@ const PricingCards = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 !py-12 !px-4 sm:!px-6 lg:!px-8">
       <div className="container">
-        <div className="text-center !mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-            Our Pricing Plans
-          </h1>
-          <p className="!mt-5 max-w-xl !mx-auto text-xl text-gray-500">
-            Choose the perfect plan for your business needs
+        <div className="!text-center !mb-16">
+          <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
+          Best <span className="!text-blue-500">value </span>deals
+          </h2>
+          <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
+          Pricing that ignites your growth!
           </p>
         </div>
 
@@ -199,7 +227,7 @@ const PricingCards = () => {
             <select
               value={selectedService}
               onChange={(e) => handleServiceChange(e.target.value)}
-              className="block w-full !pl-10 !pr-12 !py-4 text-lg font-medium text-gray-900 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none transition-all duration-300 hover:shadow-md"
+              className="block w-full !pl-10 !pr-12 !py-4 text-lg font-medium text-gray-900 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none transition-all duration-300 hover:shadow-md"
             >
               {Object.entries(services).map(([key, value]) => (
                 <option key={key} value={key}>{value}</option>
@@ -216,21 +244,21 @@ const PricingCards = () => {
         {/* Pricing Cards */}
         {isLoading ? (
           <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ) : (
           <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
             {pricingData[selectedService].map((plan, index) => (
               <div 
                 key={index}
-                className={`relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 transform hover:scale-105 ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}
+                className={`relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 transform hover:scale-105 ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}
                 style={{
                   animation: `fadeInUp 0.5s ease-out ${index * 0.1}s forwards`,
                   opacity: 0
                 }}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold !px-3 !py-1 transform translate-x-2 ">
+                  <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold !px-3 !py-1 transform translate-x-2 ">
                     Entrepreneur’s Hotshot Choice!
                   </div>
                 )}
@@ -258,7 +286,7 @@ const PricingCards = () => {
                 </div>
                 <div className="!px-8 !pb-8">
                   <button
-                    className={`w-full !px-6 !py-3 text-lg font-medium rounded-md ${plan.popular ? 'bg-indigo-600 text-white hover:bg-indigo-700' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'} transition-colors duration-300`}
+                    className={`w-full !px-6 !py-3 text-lg font-medium rounded-md ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'} transition-colors duration-300`}
                   >
                     Get started
                   </button>

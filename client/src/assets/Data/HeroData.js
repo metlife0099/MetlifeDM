@@ -3,6 +3,7 @@ import contactHeroImage from "../images/contactHero.jpg";
 import FAQHeroImage from "../images/faqHero.jpg";
 import AboutHeroImage from "../images/aboutHero.jpg";
 import PricingHeroImage from "../images/pricingHero.jpg";
+import TestimonialHeroImage from "../images/testimonialHero.jpg";
 
 export const serviceHero = {
   id: 1,
@@ -40,4 +41,11 @@ export const PricingHero = {
   description:
     "Welcome to Metlifedm LLC, where your digital growth isn’t just a promise—it’s a freakin’ explosion waiting to happen!",
   HeroImage: PricingHeroImage,
+};
+export const TestimonialHero = {
+  id: 5,
+  title: "See what are client says",
+  description:
+    "Welcome to Metlifedm LLC, where your digital growth isn’t just a promise—it’s a freakin’ explosion waiting to happen!",
+  HeroImage: TestimonialHeroImage,
 };

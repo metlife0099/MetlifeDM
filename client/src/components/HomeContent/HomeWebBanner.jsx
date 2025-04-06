@@ -76,17 +76,17 @@ const HomeWebBanner = () => {
 
   const cmfFeatures = [
     {
-      icon: <FaCode className="text-2xl text-teal-600" />,
+      icon: <FaCode className="text-2xl text-blue-600" />,
       title: "Custom Content Types",
       description: "Tailored content structures that match your specific business needs"
     },
     {
-      icon: <FaServer className="text-2xl text-teal-600" />,
+      icon: <FaServer className="text-2xl text-blue-600" />,
       title: "Scalable Architecture",
       description: "Built to grow with your business and handle increasing traffic"
     },
     {
-      icon: <FaChartLine className="text-2xl text-teal-600" />,
+      icon: <FaChartLine className="text-2xl text-blue-600" />,
       title: "Performance Optimized",
       description: "Lightning-fast load times and efficient database queries"
     }
@@ -318,14 +318,14 @@ const HomeWebBanner = () => {
                       setIsLearnModalOpen(false);
                       setIsContactModalOpen(true);
                     }}
-                    className="bg-teal-600 hover:bg-teal-700 text-white font-bold !py-3 !px-8 rounded-lg transition-all duration-300"
+                    className="bg-blue-600 hover:bg-blue-800 text-white font-bold !py-3 !px-8 rounded-lg transition-all duration-300"
                   >
                     Get Started with CMF
                   </motion.button>
                 </div>
                 <div className="md:w-1/2 bg-gray-100 rounded-lg !p-6 flex items-center justify-center">
                   <div className="text-center">
-                    <FaEdit className="text-6xl text-teal-600 !mx-auto !mb-6" />
+                    <FaEdit className="text-6xl text-blue-600 !mx-auto !mb-6" />
                     <p className="text-gray-700 font-medium">
                       Custom Content Management Framework tailored to your business workflow
                     </p>

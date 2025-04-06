@@ -218,14 +218,12 @@ const ServicesCont = () => {
   return (
     <section className="!py-12 md:!py-18 !bg-gray-100">
       <div className="container mx-auto !px-5 lg:px-0">
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1e6091] !mb-4">
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#1e6091] !mb-2.5"></span>{' '}
-            Fuel your brand. Dominate the digital world with
-            <span className="inline-block w-[20px] sm:w-[50px] h-[3px] bg-[#1e6091] !mb-2.5"></span>
+        <div className="!text-center !mb-16">
+          <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
+          We are <span className="!text-blue-500">best at </span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 !mb-8 sm:!mb-12">
-          We are best at.
+          <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
+          Fuel your brand. Dominate the digital world with
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
