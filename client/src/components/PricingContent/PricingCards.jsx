@@ -19,60 +19,66 @@ const PricingCards = () => {
       {
         name: 'Basic Website',
         price: '$520/-',
-        features: ['Up to 5 pages', 'Responsive design', 'Contact form', '1 month support', 'Social media integration', '1 month SEO booster pack FREE worth $450', '+ 27 promotional emails FREE worth $135', '+ 5% discount on monthly website maintenance.'],
+        features: ['Up to 5 pages', 'Responsive design', 'Contact form', '1 month support', 'Social media integration', '1 month SEO booster pack FREE worth $199', '+ 27 promotional emails FREE worth $135', '+ 5% discount on monthly website maintenance.'],
         popular: false
       },
       {
         name: 'Pro Basic Website',
         price: '$699/-',
-        features: ['5 - 8 pages', 'Responsive design', 'Contact form', '1 month support', 'Social media integration (all platforms)', '1 month SEO booster pack FREE worth $450', '+ 54 promotional emails FREE worth $270', '+ 15% discount on monthly website maintenance.', '10 keywords for SEO', '+ FREE domain up to $50'],
+        features: ['5 - 8 pages', 'Responsive design', 'Contact form', '1 month support', 'Social media integration (all platforms)', '1 month SEO booster pack FREE worth $199', '+ 54 promotional emails FREE worth $270', '+ 15% discount on monthly website maintenance.', '10 keywords for SEO', '+ FREE domain up to $50'],
         popular: true
       },
       {
         name: 'Business Website',
         price: '$899/-',
-        features: ['1-10 pages', 'Custom web design ', 'Responsive design', 'Contact form', 'FREE domain up to $75', 'Content upload', 'Social media integration (all platforms)', 'Google map integration', '1 month SEO booster pack FREE worth $450 + SEO setup FREE worth $100', 'SSL certificate (if Hosting is available)', '1-2 rounds of revision', '+ 170 promotional emails marketing worth $850', '+ 10 % discount on monthly maintenance.' ],
+        features: ['1-10 pages', 'Custom web design ', 'Responsive design', 'Contact form', 'FREE domain up to $75', 'Content upload', 'Social media integration (all platforms)', 'Google map integration', '1 month SEO booster pack FREE worth $199 + SEO setup FREE worth $100', 'SSL certificate (if Hosting is available)', '1-2 rounds of revision', '+ 170 promotional emails marketing worth $850', '+ 10 % discount on monthly maintenance.' ],
         popular: false
       },
       {
         name: 'Pro Business Website',
         price: '$999/-',
-        features: ['1-10 pages', 'Custom web design ', 'Responsive design', 'Contact form', 'FREE domain up to $75', 'Content upload', 'Social media integration (all platforms)', 'Google map integration', '1 month SEO booster pack FREE worth $450 + SEO setup FREE worth $100', 'SSL certificate (if Hosting is available)', '1-2 Rounds of revision', '+ 200 Promotional emails marketing worth $1000', '+ 15% Discount on monthly maintenance.', '+ Payment integration FREE worth $75', '+ 20% Discount on monthly SEO' ],
+        features: ['1-10 pages', 'Custom web design ', 'Responsive design', 'Contact form', 'FREE domain up to $75', 'Content upload', 'Social media integration (all platforms)', 'Google map integration', '1 month SEO booster pack FREE worth $199 + SEO setup FREE worth $100', 'SSL certificate (if Hosting is available)', '1-2 Rounds of revision', '+ 200 Promotional emails marketing worth $1000', '+ 15% Discount on monthly maintenance.', '+ Payment integration FREE worth $75', '+ 20% Discount on monthly SEO' ],
         popular: true
       },
 
       {
         name: 'E-commerce website',
         price: '$1750/-',
-        features: ['Custom web design', 'Responsive design', 'Product catalog', 'Shopping cart and check out system', 'Payments gateway integration','Inventory management system', 'Full authentication', 'Admin panel', 'Order management', 'Tax and shipping', 'Email (invoice) notifications', '1 month advanced SEO booster pack FREE worth $450', 'Google analytics report FREE worth $399', 'SSL certificate (if Hosting is available)','+ 300 Promotional emails marketing worth $1500', '+ advance level 1 months seo $850', 'FREE domain up to $100','+ payment gateway integration $99', '+ 10% Discount on monthly maintenance.', '+ 1 month support worth $300'],
+        features: ['Custom web design', 'Responsive design', 'Product catalog', 'Shopping cart and check out system', 'Payments gateway integration','Inventory management system', 'Full authentication', 'Admin panel', 'Order management', 'Tax and shipping', 'Email (invoice) notifications', '45 days advanced SEO booster pack FREE worth $299', 'Google analytics report FREE worth $399', 'SSL certificate (if Hosting is available)','+ 300 Promotional emails marketing worth $1500', '+ advance level 1 months seo $850', 'FREE domain up to $100','+ payment gateway integration $99', '+ 10% Discount on monthly maintenance.', '+ 1 month support worth $300'],
         popular: false
       },
       {
         name: 'Pro E-commerce website',
-        price: '$1950/-',
-        features: ['Custom web design', 'Responsive design', 'Product catalog', 'Shopping cart and check out system', 'Payments gateway integration','Inventory management system', 'Full authentication', 'Admin panel', 'Order management', 'Tax and shipping', 'Email (invoice) notifications', '1 month advanced SEO booster pack FREE worth $450', 'Google analytics report FREE worth $399', 'SSL certificate (if Hosting is available)','+ 400 Promotional emails marketing worth $2000', '+ advance level 1 months seo $850', 'FREE domain up to $100','+ payment gateway integration $99', '+ 10% Discount on monthly maintenance.', '+ 1 month support worth $300'],
+        price: '$2050/-',
+        features: ['Custom web design', 'Responsive design', 'Product catalog', 'Shopping cart and check out system', 'Payments gateway integration','Inventory management system', 'Full authentication', 'Admin panel', 'Order management', 'Tax and shipping', 'Email (invoice) notifications', '1 month advanced SEO booster pack FREE worth $450', 'Google analytics report FREE worth $399', 'SSL certificate (if Hosting is available)','+ 400 Promotional emails marketing worth $2000', '+ advance level 1 months seo $850', 'FREE domain up to $100','+ payment gateway integration $99', '+ 10% Discount on monthly maintenance.', '+ 1 month support worth $300', 'FREE Brand awarness for 15 days worth $275', 'Reputation management service 10 days worth $130'],
         popular: true
       }
     ],
     'SEO': [
       {
-        name: 'Starter SEO',
-        price: '$299/mo',
-        features: ['Keyword research', 'On-page optimization', 'Basic reporting', '5 backlinks/month', 'Monthly review'],
+        name: 'Start-up SEO',
+        price: '$450/mo',
+        features: ['Keyword research (1–5 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup', 'Website technical audit', 'Monthly performance report', 'Local directory submissions', '1-5 backlinks/month', '+ 90 FREE promotional emails worth $450','+ Website landing page audit and fix error for FREE worth $ 150', '+ 3% discount on monthly web maintenance', '+ 5% discount on google ads', '1 reports/month'],
         popular: false
       },
       {
-        name: 'Business SEO',
-        price: '$799/mo',
-        features: ['Comprehensive audit', 'Technical SEO', '15 backlinks/month', 'Bi-weekly reporting', 'Competitor analysis'],
+        name: 'Pro Start-up SEO',
+        price: '$599/mo',
+        features: ['Keyword research (5–10 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup', 'Website technical audit', 'Monthly performance report', 'Local directory submissions', '5-10 backlinks/month', '+ 120 FREE promotional emails worth $600','+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month'],
         popular: true
       },
       {
-        name: 'Enterprise SEO',
-        price: '$1499/mo',
-        features: ['Full SEO strategy', '30+ backlinks/month', 'Weekly reporting', 'Content strategy', 'Dedicated account manager'],
+        name: 'Business Seo',
+        price: '$750/mo',
+        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup', 'Website technical audit', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 150 FREE promotional emails worth $750','+ FREE website optimization for fast loading time worth $120', '+ 10% discount on monthly web maintenance', '+ 5% discount on google ads', '2 reports/month', 'Local directory submissions'],
         popular: false
-      }
+      },
+      {
+        name: 'Pro Business Seo',
+        price: '$899/mo',
+        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Setup your Google My Business (GMB) profile for SEO', 'Website technical audit','Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 180 FREE promotional emails worth $899','+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month', 'FREE sample pack for reputation management service',],
+        popular: false
+      },
     ],
     'SMM': [
       {
@@ -224,17 +230,17 @@ const PricingCards = () => {
                 }}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold !px-3 !py-1 transform translate-x-2 -translate-y-2 rotate-12">
-                    POPULAR
+                  <div className="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold !px-3 !py-1 transform translate-x-2 ">
+                    Entrepreneur’s Hotshot Choice!
                   </div>
                 )}
                 <div className="!p-8">
                   <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
                   <div className="!mt-4 flex items-baseline text-gray-900">
                     <span className="text-5xl font-extrabold tracking-tight">{plan.price}</span>
-                    {plan.price.includes('/mo') && (
+                    {/* {plan.price.includes('/mo') && (
                       <span className="!ml-1 text-xl font-semibold">/month</span>
-                    )}
+                    )} */}
                   </div>
                   <p className="!mt-2 text-gray-500">Perfect for {selectedService === 'web dev' ? 'small to medium businesses' : 'growing businesses'}</p>
                   <ul className="!mt-6 !space-y-4">

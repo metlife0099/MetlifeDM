@@ -14,22 +14,20 @@ const AboutBanner = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="text-center !mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 !mb-6 relative inline-block">
-            <span className="absolute -left-8 top-1/2 w-6 h-1 bg-blue-500 transform -translate-y-1/2"></span>
-            About Us
-            <span className="absolute -right-8 top-1/2 w-6 h-1 bg-blue-500 transform -translate-y-1/2"></span>
+        <div className="!text-center !mb-16">
+          <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
+          About <span className="!text-blue-500">us</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl !mx-auto">
-            Ignite your digital presence with our high-voltage marketing solutions
+          <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
+          Ignite your digital presence with our high-voltage marketing solutions
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 !mx-4 lg:!mx-0">
           <div className="w-full lg:w-1/2">
             <p className="text-lg text-blue-500 font-semibold mb-4 flex items-center">
-              <span className="w-8 h-1 bg-blue-500 mr-3"></span>
-              Dominate the digital world 🌎
+              <span className="w-8 h-1 bg-blue-500 !mr-3"></span>
+              Ready Dominate the digital world 🌎
             </p>
 
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 !mb-6 leading-tight">

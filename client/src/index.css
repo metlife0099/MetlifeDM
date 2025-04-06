@@ -10,6 +10,7 @@
 
 body{
   font-family: "Oswald", sans-serif;
+  overflow-x: hidden;
 }
 
 .container{

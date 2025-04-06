@@ -1,6 +1,7 @@
 // AboutCards.jsx
 import React from "react";
 import CardBg from '../../assets/images/aboutBg.jpg'
+import { motion } from 'framer-motion';
 
 const AboutCards = () => {
   // Sample data
@@ -48,9 +49,13 @@ const AboutCards = () => {
 
       <div className="relative z-10 container !mx-auto">
         {/* Section header */}
-        <div className="text-center !mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white !mb-4">Why Choose Us</h2>
-          <div className="w-20 h-1 bg-blue-500 !mx-auto"></div>
+        <div className="!text-center !mb-16">
+          <h2 className="!text-4xl md:!text-6xl !font-bold !text-white !mb-3">
+            Why <span className="!text-blue-500">Choose </span>us
+          </h2>
+          <p className="!text-xl !text-white !max-w-3xl !mx-auto">
+            We don’t just build the future — we engineer it!
+          </p>
         </div>
 
         {/* Cards grid with modified dividers */}
