@@ -94,9 +94,9 @@ const Header = () => {
 
           {/* Get Free Quotes Button */}
           <div className="hidden lg:block">
-            <button className="bg-[#023E8A] text-white rounded-md hover:bg-[#03045E] transition-colors cursor-pointer !py-2 !px-4">
+            <Link to='/contact' className="bg-[#023E8A] text-white rounded-md hover:bg-[#03045E] transition-colors cursor-pointer !py-2 !px-4">
               Get Free Quotes
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

@@ -24,34 +24,34 @@ const PricingCards = () => {
         popular: false
       },
       {
-        name: 'Pro Basic Website',
+        name: 'Pro-level Basic Website',
         price: '$699/-',
-        features: ['5 - 8 pages', 'Responsive design', 'Contact form', '1 month support', 'Social media integration (all platforms)', '1 month SEO booster pack FREE worth $199', '+ 54 promotional emails FREE worth $270', '+ 15% discount on monthly website maintenance.', '10 keywords for SEO', '+ FREE domain up to $50'],
+        features: ['5-8 pages', 'Responsive design (mobile-first)', 'Contact form + Google Analytics setup', '2 months of priority support', 'Social media integration (all platforms) + branded kit', 'FREE 1-Month SEO Launchpad: 10 keywords to kickstart rankings ($199 value)', 'FREE 54 High-Conversion Emails: Pre-designed & automated ($270 value)', 'FREE Domain: Up to $50 value', '15% OFF Maintenance: 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
         popular: true
       },
       {
         name: 'Business Website',
         price: '$899/-',
-        features: ['1-10 pages', 'Custom web design ', 'Responsive design', 'Contact form', 'FREE domain up to $75', 'Content upload', 'Social media integration (all platforms)', 'Google map integration', '1 month SEO booster pack FREE worth $199 + SEO setup FREE worth $100', 'SSL certificate (if Hosting is available)', '1-2 rounds of revision', '+ 170 promotional emails marketing worth $850', '+ 10 % discount on monthly maintenance.' ],
+        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'FREE Domain: Up to $75.00', 'FREE SSL Certificate', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 170 High-Conversion Emails: Pre-built campaigns ($850 value)', '2 months of priority support', '1-2 rounds of revision', '10% OFF Maintenance: For 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
         popular: false
       },
       {
-        name: 'Pro Business Website',
-        price: '$999/-',
-        features: ['1-10 pages', 'Custom web design ', 'Responsive design', 'Contact form', 'FREE domain up to $75', 'Content upload', 'Social media integration (all platforms)', 'Google map integration', '1 month SEO booster pack FREE worth $199 + SEO setup FREE worth $100', 'SSL certificate (if Hosting is available)', '1-2 Rounds of revision', '+ 200 Promotional emails marketing worth $1000', '+ 15% Discount on monthly maintenance.', '+ Payment integration FREE worth $75', '+ 20% Discount on monthly SEO' ],
+        name: 'Pro-level Business Website',
+        price: '$1149/-',
+        features: ['* 1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'Social media integration (all platforms)', 'FREE Domain: Up to $75', 'FREE SSL Certificate', 'FREE Payment Integration: Accept payments fast ($75 value)', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 200 High-Conversion Emails: Pre-built campaigns ($1,000 value)', '2 months of priority support', '1-2 rounds of revision', '15% OFF Maintenance: For 3 months', '20% OFF Monthly SEO: For 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
         popular: true
       },
 
       {
         name: 'E-commerce website',
         price: '$1750/-',
-        features: ['Custom web design', 'Responsive design', 'Product catalog', 'Shopping cart and check out system', 'Payments gateway integration','Inventory management system', 'Full authentication', 'Admin panel', 'Order management', 'Tax and shipping', 'Email (invoice) notifications', '45 days advanced SEO booster pack FREE worth $299', 'Google analytics report FREE worth $399', 'SSL certificate (if Hosting is available)','+ 300 Promotional emails marketing worth $1500', '+ advance level 1 months seo $850', 'FREE domain up to $100','+ payment gateway integration $99', '+ 10% Discount on monthly maintenance.', '+ 1 month support worth $300'],
+        features: ['Custom web design, responsive + speed- optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30- Day Advanced SEO Launchpad: 15 keywords + content ($850 value)', 'FREE 300 High-Conversion Emails: Pre-built campaigns ($1,500 value)', 'FREE Google Analytics Report: ($399 value)', '2 months of priority support ($500 value)', '2-3 rounds of revision', '10% OFF Maintenance: For 3 months', 'Launch Guarantee: Store live in 30 days or 50% back!', ],
         popular: false
       },
       {
-        name: 'Pro E-commerce website',
+        name: 'Pro-level E-commerce website',
         price: '$2050/-',
-        features: ['Custom web design', 'Responsive design', 'Product catalog', 'Shopping cart and check out system', 'Payments gateway integration','Inventory management system', 'Full authentication', 'Admin panel', 'Order management', 'Tax and shipping', 'Email (invoice) notifications', '1 month advanced SEO booster pack FREE worth $450', 'Google analytics report FREE worth $399', 'SSL certificate (if Hosting is available)','+ 400 Promotional emails marketing worth $2000', '+ advance level 1 months seo $850', 'FREE domain up to $100','+ payment gateway integration $99', '+ 10% Discount on monthly maintenance.', '+ 1 month support worth $300', 'FREE Brand awarness for 15 days worth $275', 'Reputation management service 10 days worth $130'],
+        features: ['Custom web design, responsive + speed-optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30 Day Advanced SEO Launchpad: 15 keywords + links ($1,000 value)', '* FREE 400 High-Conversion Emails: Pre-built campaigns ($2,000 value)', 'FREE Google Analytics Report: ($399 value)', 'FREE Brand Awareness Boost: ($150 value)', 'FREE Reputation Management: ($450 value)', '2 months of priority support ($500 value)', '3-4 rounds of revision', '10% OFF Maintenance: For 3 months', '* Launch Guarantee: Store live in 30 days or 50% back!' ],
         popular: true
       }
     ],
@@ -59,53 +59,51 @@ const PricingCards = () => {
       {
         name: 'Start-up SEO',
         price: '$450/mo',
-        features: ['Keyword research (1–5 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup', 'Website technical audit', 'Monthly performance report', 'Local directory submissions', '1-5 backlinks/month', '+ 90 FREE promotional emails worth $450','+ Website landing page audit and fix error for FREE worth $ 150', '+ 3% discount on monthly web maintenance', '+ 5% discount on google ads', '1 reports/month'],
+        features: ['Keyword research (5-10 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup + local directory submissions', 'Website technical audit', 'Monthly performance report (rankings, traffic, insights)', '1-5 high-authority backlinks/month', 'FREE 90 High-Conversion Emails: Pre-built & targeted ($450 value)', 'FREE Landing Page Audit + Fixes: ($150 value)', '3% OFF Maintenance: For 3 months', '5% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 10% traffic boost in 75 days or next month free!'], 
         popular: false
       },
       {
-        name: 'Pro Start-up SEO',
+        name: 'Pro-level Start-up SEO',
         price: '$599/mo',
-        features: ['Keyword research (5–10 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup', 'Website technical audit', 'Monthly performance report', 'Local directory submissions', '5-10 backlinks/month', '+ 120 FREE promotional emails worth $600','+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month'],
+        features: ['Keyword research (up to 12 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup + local directory submissions', 'Website technical audit', 'One comprehensive monthly report (rankings, traffic, insights)', '5-10 high-authority backlinks/month', 'FREE 120 High-Conversion Emails: Pre-built & targeted ($600 value)', 'FREE Website Speed Optimization: Fast loading ($120 value)', '5% OFF Maintenance: For 3 months', '10% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 17% traffic boost in 75 days or next month free!'],
         popular: true
       },
       {
         name: 'Business Seo',
         price: '$750/mo',
-        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup', 'Website technical audit', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 150 FREE promotional emails worth $750','+ FREE website optimization for fast loading time worth $120', '+ 10% discount on monthly web maintenance', '+ 5% discount on google ads', '2 reports/month', 'Local directory submissions'],
+        features: ['Keyword communiquéresearch (10-15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup + local directory submissions', 'Website technical audit', 'One comprehensive monthly report (rankings, traffic, insights)', '10-15 high-authority backlinks/month', 'FREE 150 High-Conversion Emails: Pre-built & targeted ($750 value)', 'FREE Website Speed Optimization: Fast loading ($120 value)', '10% OFF Maintenance: For 3 months', '5% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 19% traffic boost in 75 days or next month free!',],
         popular: false
       },
       {
-        name: 'Pro Business Seo',
+        name: 'Pro-level Business Seo',
         price: '$899/mo',
-        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Setup your Google My Business (GMB) profile for SEO', 'Website technical audit','Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 180 FREE promotional emails worth $899','+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month', 'FREE sample pack for reputation management service worth $99',],
+        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Setup your Google My Business (GMB) profile for SEO', 'Website technical audit', 'Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 180 FREE promotional emails worth $899', '+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month', 'FREE sample pack for reputation management service worth $99',],
         popular: true
       },
       {
         name: 'E-commerce SEO',
         price: '$1599/mo',
-        features: ['Large-scale keyword targeting (products/categories)', 'On-page SEO (titles, meta, alt tags)', 'SEO for 100+ product pages Schema markup for rich snippets Technical SEO for product filters, pagination', 'Website technical audit','Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Product feed optimization for Google Shopping', 'Backlink strategy for products and categories', 'Local directory submissions', 'Conversion rate optimization (CRO)', 'Ongoing competitor/product tracking Blog & content marketing','Detailed monthly analytics + revenue tracking', '+ 320 FREE promotional emails worth $1599','+ FREE website optimization for fast loading time worth $350', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '3 reports/month', 'FREE sample pack for reputation management service worth $149',],
+        features: ['Large-scale keyword targeting (products/categories)', 'On-page SEO (titles, meta, alt tags)', 'SEO for 100+ product pages Schema markup for rich snippets Technical SEO for product filters, pagination', 'Website technical audit', 'Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Product feed optimization for Google Shopping', 'Backlink strategy for products and categories', 'Local directory submissions', 'Conversion rate optimization (CRO)', 'Ongoing competitor/product tracking Blog & content marketing', 'Detailed monthly analytics + revenue tracking', '+ 320 FREE promotional emails worth $1599', '+ FREE website optimization for fast loading time worth $350', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '3 reports/month', 'FREE sample pack for reputation management service worth $149',],
         popular: false
       },
     ],
     'GAA': [
       {
         name: 'Start-up package',
-        price: '$299/mo',
-        features: ['Google Ads account setup (one-time setup + $499)', '1 Campaign (Search or Display)', 'Monthly Ads management (client business marketing budget)', 'Google Analytics (GA4) + Tag Manager basic setup', '1 monthly performance report (PDF or email)'],
+        price: '$799/mo',
+        features: ['High-Converting Google Search Campaigns (Up to 4 laser-focused ad groups targeting your top services.)', 'Precision geo-targeting to reach nearby, ready-to-buy customers.', 'Negative keyword strategy to cut wasted spend and boost ROI', 'Track all key metrics: Clicks, Conversions, CTR & CPA and ROI-focused.', 'A/B testing and relentless optimization ensure every dollar drives maximum ROI!', 'Plus, a custom insight every month to level up your strategy'],
+        bonus: 'Premium Bonuses – Absolutely FREE!',
+        bonusData: ['170 Email Marketing Campaigns (Value: $799) – Fuel follow-ups & boost repeat business', 'Website Speed & SEO Optimization (Value: $199) – Convert more visitors into leads', 'SEO Jumpstart Pack (Value: $299) – Includes on-page keyword optimization for faster Google ranking', 'Up to 2 rounds of revisions for Google ads', 'Brief action summary: “What we did” + “Next steps” '],
         popular: false
       },
       {
-        name: 'Growth Package',
-        price: '$799/mo',
-        features: ['4 platforms', '24 posts/month', 'Content strategy', 'Advanced analytics', 'Ad management'],
+        name: 'Pro Start-up package',
+        price: '$1249/mo',
+        features: ['High-Converting Google Search Campaigns (Up to 8 laser-focused ad groups targeting your top service.)', 'Precision geo-targeting to reach nearby + bid adjustment for high value locales.', 'Negative keyword setup + ongoing refinement to optimize spend.', 'Display Retargeting Campaign ads to past visitors of your website.', 'Metrics: clicks, conversions, CTR, CPA, ROAS (return on ad spend).', 'A/B testing and relentless optimization ensure every dollar drives maximum ROI!', 'Plus, a custom insight every month to level up your strategy.'],
+        bonus: 'Premium Bonuses – Absolutely FREE!',
+        bonusData: ['250 Email Marketing Campaigns (Value: $1249) – Fuel follow-ups & boost repeat business.', 'Website Conversion Pro: Speed, mobile tweaks, and CTA overhaul for website page + one landing page optimisation ($189 value).', 'SEO Power Start Plus: On-page SEO up to 3 pages, up to 8 keywords research reports, and one 450-word blog posts ($399 value).', 'Up to 4 rounds of revision.', 'Brief action summary: “What we did” + “Next steps”'],
         popular: true
       },
-      {
-        name: 'Premium Package',
-        price: '$1299/mo',
-        features: ['All platforms', 'Daily posting', 'Influencer collabs', 'Video content', 'Crisis management'],
-        popular: false
-      }
     ],
     'PPC': [
       {
@@ -147,7 +145,7 @@ const PricingCards = () => {
         popular: false
       }
     ],
-    
+
     'SSM': [
       {
         name: 'Basic Maintenance',
@@ -209,10 +207,10 @@ const PricingCards = () => {
       <div className="container">
         <div className="!text-center !mb-16">
           <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
-          Best <span className="!text-blue-500">value </span>deals
+            Best <span className="!text-blue-500">value </span>deals
           </h2>
           <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
-          Pricing that ignites your growth!
+            Pricing that ignites your growth!
           </p>
         </div>
 
@@ -249,7 +247,7 @@ const PricingCards = () => {
         ) : (
           <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
             {pricingData[selectedService].map((plan, index) => (
-              <div 
+              <div
                 key={index}
                 className={`relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 transform hover:scale-105 ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}
                 style={{
@@ -283,6 +281,24 @@ const PricingCards = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+                <div className="!px-8 !pb-8">
+                  <p className="text-[16px] text-gray-800 font-semibold">{plan.bonus}</p>
+
+                  {plan.bonusData && (
+                    <ul className="!mt-6 !space-y-4">
+                      {plan.bonusData.map((bonusdata, i) => (
+                        <li key={i} className="flex items-start">
+                          <div className="flex-shrink-0">
+                            <svg className="h-6 w-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                          </div>
+                          <p className="!ml-3 text-base text-gray-700">{bonusdata}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
                 <div className="!px-8 !pb-8">
                   <button
