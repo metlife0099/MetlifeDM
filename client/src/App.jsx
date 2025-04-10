@@ -9,11 +9,13 @@ import FAQ from './pages/FAQ'
 import About from './pages/About'
 import Pricing from './pages/Pricing'
 import Testimonials from './pages/Testimonials'
+import ScrollToTop from './components/Others/ScrollToTop'
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

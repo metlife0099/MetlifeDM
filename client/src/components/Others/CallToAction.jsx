@@ -27,7 +27,7 @@ const CallToAction = () => {
         </div>
       </div>
 
-      {/* Reusable PopupContact component */}
+      {/* PopupContact menu */}
       <PopupContact 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)}

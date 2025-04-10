@@ -75,7 +75,7 @@ const ServicesDetails = () => {
       ]
     },
     {
-      title: 'SMM',
+      title: 'Social Medial Management',
       description: 'Boost your brand awareness and engagement through strategic social media marketing. We create content that resonates with your audience and grows your online community.',
       features: [
         'Social media strategy',

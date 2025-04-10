@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FaArrowRightFromBracket } from "react-icons/fa6";
+import { IoGridSharp } from "react-icons/io5";
+import PopupContact from '../Others/PopupContact';
 
 const PricingCards = () => {
   const services = {
@@ -13,6 +16,7 @@ const PricingCards = () => {
 
   const [selectedService, setSelectedService] = useState('web dev');
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Pricing data for each service
   const pricingData = {
@@ -38,20 +42,20 @@ const PricingCards = () => {
       {
         name: 'Pro-level Business Website',
         price: '$1149/-',
-        features: ['* 1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'Social media integration (all platforms)', 'FREE Domain: Up to $75', 'FREE SSL Certificate', 'FREE Payment Integration: Accept payments fast ($75 value)', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 200 High-Conversion Emails: Pre-built campaigns ($1,000 value)', '2 months of priority support', '1-2 rounds of revision', '15% OFF Maintenance: For 3 months', '20% OFF Monthly SEO: For 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
+        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'Social media integration (all platforms)', 'FREE Domain: Up to $75', 'FREE SSL Certificate', 'FREE Payment Integration: Accept payments fast ($75 value)', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 200 High-Conversion Emails: Pre-built campaigns ($1,000 value)', '2 months of priority support', '1-2 rounds of revision', '15% OFF Maintenance: For 3 months', '20% OFF Monthly SEO: For 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
         popular: true
       },
 
       {
         name: 'E-commerce website',
         price: '$1750/-',
-        features: ['Custom web design, responsive + speed- optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30- Day Advanced SEO Launchpad: 15 keywords + content ($850 value)', 'FREE 300 High-Conversion Emails: Pre-built campaigns ($1,500 value)', 'FREE Google Analytics Report: ($399 value)', '2 months of priority support ($500 value)', '2-3 rounds of revision', '10% OFF Maintenance: For 3 months', 'Launch Guarantee: Store live in 30 days or 50% back!', ],
+        features: ['Custom web design, responsive + speed- optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30- Day Advanced SEO Launchpad: 15 keywords + content ($850 value)', 'FREE 300 High-Conversion Emails: Pre-built campaigns ($1,500 value)', 'FREE Google Analytics Report: ($399 value)', '2 months of priority support ($500 value)', '2-3 rounds of revision', '10% OFF Maintenance: For 3 months', 'Launch Guarantee: Store live in 30 days or 50% back!',],
         popular: false
       },
       {
         name: 'Pro-level E-commerce website',
         price: '$2050/-',
-        features: ['Custom web design, responsive + speed-optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30 Day Advanced SEO Launchpad: 15 keywords + links ($1,000 value)', '* FREE 400 High-Conversion Emails: Pre-built campaigns ($2,000 value)', 'FREE Google Analytics Report: ($399 value)', 'FREE Brand Awareness Boost: ($150 value)', 'FREE Reputation Management: ($450 value)', '2 months of priority support ($500 value)', '3-4 rounds of revision', '10% OFF Maintenance: For 3 months', '* Launch Guarantee: Store live in 30 days or 50% back!' ],
+        features: ['Custom web design, responsive + speed-optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30 Day Advanced SEO Launchpad: 15 keywords + links ($1,000 value)', '* FREE 400 High-Conversion Emails: Pre-built campaigns ($2,000 value)', 'FREE Google Analytics Report: ($399 value)', 'FREE Brand Awareness Boost: ($150 value)', 'FREE Reputation Management: ($450 value)', '2 months of priority support ($500 value)', '3-4 rounds of revision', '10% OFF Maintenance: For 3 months', '* Launch Guarantee: Store live in 30 days or 50% back!'],
         popular: true
       }
     ],
@@ -59,7 +63,7 @@ const PricingCards = () => {
       {
         name: 'Start-up SEO',
         price: '$450/mo',
-        features: ['Keyword research (5-10 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup + local directory submissions', 'Website technical audit', 'Monthly performance report (rankings, traffic, insights)', '1-5 high-authority backlinks/month', 'FREE 90 High-Conversion Emails: Pre-built & targeted ($450 value)', 'FREE Landing Page Audit + Fixes: ($150 value)', '3% OFF Maintenance: For 3 months', '5% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 10% traffic boost in 75 days or next month free!'], 
+        features: ['Keyword research (5-10 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup + local directory submissions', 'Website technical audit', 'Monthly performance report (rankings, traffic, insights)', '1-5 high-authority backlinks/month', 'FREE 90 High-Conversion Emails: Pre-built & targeted ($450 value)', 'FREE Landing Page Audit + Fixes: ($150 value)', '3% OFF Maintenance: For 3 months', '5% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 10% traffic boost in 75 days or next month free!'],
         popular: false
       },
       {
@@ -71,19 +75,19 @@ const PricingCards = () => {
       {
         name: 'Business Seo',
         price: '$750/mo',
-        features: ['Keyword communiquéresearch (10-15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup + local directory submissions', 'Website technical audit', 'One comprehensive monthly report (rankings, traffic, insights)', '10-15 high-authority backlinks/month', 'FREE 150 High-Conversion Emails: Pre-built & targeted ($750 value)', 'FREE Website Speed Optimization: Fast loading ($120 value)', '10% OFF Maintenance: For 3 months', '5% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 19% traffic boost in 75 days or next month free!',],
+        features: ['Keyword communication research (10-15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Google My Business setup + local directory submissions', 'Website technical audit', 'One comprehensive monthly report (rankings, traffic, insights)', '10-15 high-authority backlinks/month', 'FREE 150 High-Conversion Emails: Pre-built & targeted ($750 value)', 'FREE Website Speed Optimization: Fast loading ($120 value)', '10% OFF Maintenance: For 3 months', '5% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 19% traffic boost in 75 days or next month free!',],
         popular: false
       },
       {
         name: 'Pro-level Business Seo',
         price: '$899/mo',
-        features: ['Keyword research (10–15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Setup your Google My Business (GMB) profile for SEO', 'Website technical audit', 'Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Monthly performance report', 'Local directory submissions', '10-15 backlinks/month', '+ 180 FREE promotional emails worth $899', '+ FREE website optimization for fast loading time worth $120', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '2 reports/month', 'FREE sample pack for reputation management service worth $99',],
+        features: ['Keyword research (10-15 keywords)', 'On-page SEO (titles, meta, alt tags)', 'Website technical audit + crawlability/indexation', 'Page Speed & Core Web Vitals optimization', 'One comprehensive monthly report (rankings, traffic, insights)', 'Local directory submissions', '10-15 high-authority backlinks/month', 'FREE 180 High-Conversion Emails: Pre-built & targeted ($899 value)', 'FREE Website Speed Optimization: Fast loading ($120 value)', 'FREE 10-Day Reputation Management Trial: Review monitoring & boost ($99 value)', '5% OFF Maintenance: For 3 months', '10% OFF Google Ads: For 3 months', 'Monthly strategy call', 'guarantee: 17% traffic boost in 75 days or next month free!',],
         popular: true
       },
       {
         name: 'E-commerce SEO',
         price: '$1599/mo',
-        features: ['Large-scale keyword targeting (products/categories)', 'On-page SEO (titles, meta, alt tags)', 'SEO for 100+ product pages Schema markup for rich snippets Technical SEO for product filters, pagination', 'Website technical audit', 'Site Crawlability and Indexation', 'Page Speed and Core Web Vitals', 'Product feed optimization for Google Shopping', 'Backlink strategy for products and categories', 'Local directory submissions', 'Conversion rate optimization (CRO)', 'Ongoing competitor/product tracking Blog & content marketing', 'Detailed monthly analytics + revenue tracking', '+ 320 FREE promotional emails worth $1599', '+ FREE website optimization for fast loading time worth $350', '+ 5% discount on monthly web maintenance', '+ 10% discount on google ads', '3 reports/month', 'FREE sample pack for reputation management service worth $149',],
+        features: ['Large-scale keyword targeting (products/categories)', 'On-page SEO (titles, meta, alt tags) for 100+ product pages', 'Schema markup for rich snippets', 'Technical SEO (filters, pagination, crawlability/indexation)', 'Page Speed & Core Web Vitals optimization', 'Product feed optimization for Google Shopping', '15-20 high-authority backlinks/month', 'Local directory submissions', 'Conversion rate optimization (CRO)', 'Ongoing competitor/product tracking', 'Blog & content marketing', 'Two comprehensive monthly reports (SEO + revenue/competitors)', 'FREE 320 High-Conversion Emails: Pre-b campaigns & automation ($1,599 value)', 'FREE Website Speed Optimization: ($350 value)', 'FREE 15-Day Reputation Management Trial: Review monitoring & boost ($149 value)', 'FREE SSL Certificate', '5% OFF Maintenance: For 3 months', '10% OFF Google Ads: For 3 months', 'Dedicated account manager + monthly strategy call', 'guarantee: 20% revenue boost in 90 days or next month free!'],
         popular: false
       },
     ],
@@ -94,7 +98,7 @@ const PricingCards = () => {
         features: ['High-Converting Google Search Campaigns (Up to 4 laser-focused ad groups targeting your top services.)', 'Precision geo-targeting to reach nearby, ready-to-buy customers.', 'Negative keyword strategy to cut wasted spend and boost ROI', 'Track all key metrics: Clicks, Conversions, CTR & CPA and ROI-focused.', 'A/B testing and relentless optimization ensure every dollar drives maximum ROI!', 'Plus, a custom insight every month to level up your strategy'],
         bonus: 'Premium Bonuses – Absolutely FREE!',
         bonusData: ['170 Email Marketing Campaigns (Value: $799) – Fuel follow-ups & boost repeat business', 'Website Speed & SEO Optimization (Value: $199) – Convert more visitors into leads', 'SEO Jumpstart Pack (Value: $299) – Includes on-page keyword optimization for faster Google ranking', 'Up to 2 rounds of revisions for Google ads', 'Brief action summary: “What we did” + “Next steps” '],
-        popular: false
+        popular: false,
       },
       {
         name: 'Pro Start-up package',
@@ -302,7 +306,8 @@ const PricingCards = () => {
                 </div>
                 <div className="!px-8 !pb-8">
                   <button
-                    className={`w-full !px-6 !py-3 text-lg font-medium rounded-md ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'} transition-colors duration-300`}
+                    onClick={() => setIsModalOpen(true)}
+                    className={`w-full !px-6 !py-3 text-lg font-medium rounded-md cursor-pointer ${plan.popular ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'} transition-colors duration-300`}
                   >
                     Get started
                   </button>
@@ -311,6 +316,110 @@ const PricingCards = () => {
             ))}
           </div>
         )}
+
+        {/* Custom Google Ads & PPC Services Section */}
+        <div className="!my-24 !px-4 sm:!px-6 lg:!px-8">
+          <div className="max-w-7xl !mx-auto bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl shadow-xl overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              {/* Left Side - Content */}
+              <div className="!p-12">
+                <h2 className="!text-2xl md:!text-3xl !font-bold !text-white !mb-4">
+                  Supercharge your Brand’s Growth with a  <span className="!text-yellow-300">100% Customized services Powerhouse</span> Tailored Solutions, Skyrocketing ROI, specially Crafted for goal-oriented US businesses
+                </h2>
+                <p className="!text-lg !text-blue-100 !mb-8">
+                  Our expert team delivers: customized services like Custom Website Development, Search Engine Optimization (SEO), Google Ads & Pay-Per-Click Campaigns, Social Media Management, High-Quality Lead Generation, Brand Awareness Campaigns, Online Reputation Management service
+                  ...and much more — all aligned with your business goals.
+                </p>
+
+                <div className="!space-y-6 !mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 !mt-1">
+                      <svg className="h-6 w-6 !text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <div className="!ml-4">
+                      <h3 className="!text-xl !font-bold !text-white">Getting started is simple:</h3>
+                      <p className="!text-blue-100">
+                        <span className='text-white font-semibold'>- Free Discovery Call:</span> Dive into an Explosive Discovery Call – Unlock Your Business, Smash Your Goals, and Conquer Your Challenges, Absolutely FREE (a $199 Value)!
+                      </p>
+                      <p className="!text-blue-100">
+                        <span className='text-white font-semibold'>- Free Custom Proposal: </span> Within 48 hours, you’ll get a tailored plan with services and pricing designed just for you.
+                      </p>
+                      <p className="!text-blue-100">
+                        <span className='text-white font-semibold'>- Execution & Results: </span> We launch your strategy and adjust as needed to maximize your success.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 !mt-1">
+                      <svg className="h-6 w-6 !text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <div className="!ml-4">
+                      <h3 className="!text-xl !font-bold !text-white">Why Choose Customized services?</h3>
+                      <p className="!text-blue-100">
+                        <span className='text-white font-semibold'>- Perfect Fit:</span> No paying for services you don’t need—every piece is built for your brand.
+                      </p>
+                      <p className="!text-blue-100">
+                        <span className='text-white font-semibold'>- Scalable Solutions: </span> Start small or go big, with room to grow as your business does.
+                      </p>
+                      <p className="!text-blue-100">
+                        <span className='text-white font-semibold'>- US Market Expertise: </span> Strategies that resonate with American audiences and trends in 2025.
+                      </p>
+                      <p className="!text-blue-100">
+                        <span className='text-white font-semibold'>- Hands-On Support: </span> A dedicated partner who’s as invested in your success as you are.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row !space-y-4 sm:!space-y-0 sm:!space-x-4">
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="!px-8 !py-4 !text-lg !font-bold !text-center !text-blue-600 !bg-white rounded-lg shadow-md hover:!bg-gray-100 transition-colors duration-300 cursor-pointer flex gap-4 items-center"
+                  >
+                    <IoGridSharp /> Get Start <FaArrowRightFromBracket />
+                  </button>
+                </div>
+              </div>
+
+              {/* Right Side - Visual */}
+              <div className="hidden md:block relative bg-blue-700">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center opacity-20"></div>
+                <div className="relative !h-full !p-8 flex items-center justify-center">
+                  <div className="!bg-white !p-6 rounded-xl shadow-2xl !max-w-xs transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div className="!text-blue-600 !font-bold !text-xl !mb-2">Your Custom Plan</div>
+                    <div className="!h-48 !bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg !p-4">
+                      <div className="flex justify-between !mb-3">
+                        <span className="!text-sm !text-blue-600">Services</span>
+                        <span className="!text-sm !font-bold !text-green-600">Custom</span>
+                      </div>
+                      <div className="flex justify-between !mb-3">
+                        <span className="!text-sm !text-blue-600">Budget</span>
+                        <span className="!text-sm !font-bold !text-green-600">Flexible</span>
+                      </div>
+                      <div className="flex justify-between !mb-3">
+                        <span className="!text-sm !text-blue-600">Duration</span>
+                        <span className="!text-sm !font-bold !text-green-600">Adjustable</span>
+                      </div>
+                      <div className="!mt-4 !pt-3 !border-t border-blue-200">
+                        <span className="!text-xs !text-blue-500">Tailored exactly to your requirements</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* PopupContact menu */}
+        <PopupContact
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
 
       {/* Add CSS for animations */}

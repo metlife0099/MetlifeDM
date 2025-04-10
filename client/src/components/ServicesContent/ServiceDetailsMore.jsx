@@ -31,70 +31,78 @@ const ServicesDetailsMore = () => {
 
   const services = [
     {
-      title: 'Website Development',
-      description: 'We create responsive, user-friendly websites that drive engagement and conversions. Our development process focuses on performance, security, and scalability to ensure your online presence stands out.',
+      id: 'lead-generation',
+      title: 'Lead Generation Service',
+      description: 'Generate high-quality leads for your business with our targeted strategies that connect you with potential customers ready to engage.',
       features: [
-        'Custom website design',
-        'Mobile-responsive development',
-        'E-commerce solutions',
-        'CMS integration',
-        'Ongoing maintenance'
-      ]
+        'Target audience identification',
+        'Multi-channel lead generation',
+        'Lead qualification',
+        'CRM integration',
+        'Conversion tracking'
+      ],
+      gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Search Engine Optimization (SEO)',
-      description: 'Improve your website\'s visibility in search engine results with our comprehensive SEO services. We use ethical, white-hat techniques to help you rank higher and attract more organic traffic.',
+      id: 'brand-awareness',
+      title: 'Brand Awareness',
+      description: 'Increase your brand visibility and recognition through strategic campaigns that put your business in front of the right audience.',
       features: [
-        'Keyword research & strategy',
-        'On-page optimization',
-        'Technical SEO audits',
-        'Link building',
-        'Local SEO optimization'
-      ]
+        'Brand positioning strategy',
+        'Multi-platform campaigns',
+        'Influencer collaborations',
+        'Brand recall techniques',
+        'Awareness metrics tracking'
+      ],
     },
     {
-      title: 'Google Ads & Analytics',
-      description: 'Maximize your advertising ROI with expertly managed Google Ads campaigns. Combined with powerful analytics, we help you understand your audience and optimize your marketing spend.',
+      id: 'content-creation',
+      title: 'Content Creation',
+      description: 'Engage your audience with high-quality, relevant content that tells your brand story and drives customer action.',
       features: [
-        'Campaign setup & management',
-        'Conversion tracking',
-        'Audience targeting',
-        'Performance analysis',
-        'ROI optimization'
-      ]
+        'Content strategy development',
+        'Blog posts & articles',
+        'Visual content creation',
+        'Video production',
+        'Content calendar management'
+      ],
     },
     {
-      title: 'Pay-Per-Click Service',
-      description: 'Our PPC management services deliver targeted traffic to your website with measurable results. We create and optimize campaigns across multiple platforms to maximize your advertising budget.',
+      id: 'reputation-management',
+      title: 'Reputation Management Services',
+      description: 'Monitor, protect, and improve your online reputation to build trust with customers and stakeholders.',
       features: [
-        'Campaign strategy development',
-        'Ad copy creation',
-        'Landing page optimization',
-        'Bid management',
-        'Performance reporting'
-      ]
+        'Online review management',
+        'Brand sentiment analysis',
+        'Crisis management',
+        'Positive content promotion',
+        'Reputation monitoring'
+      ],
     },
     {
-      title: 'SMM',
-      description: 'Boost your brand awareness and engagement through strategic social media marketing. We create content that resonates with your audience and grows your online community.',
+      id: 'weekly-smm',
+      title: 'Weekly Plan for SMM',
+      description: 'Consistent social media presence with our weekly management plans that keep your audience engaged and growing.',
       features: [
-        'Social media strategy',
-        'Content creation',
-        'Community management',
-        'Influencer partnerships',
-        'Performance analytics'
-      ]
+        'Weekly content calendar',
+        'Platform-specific strategies',
+        'Engagement monitoring',
+        'Performance analytics',
+        'Weekly optimization'
+      ],
     },
     {
-      title: 'Email marketing',
-      description: 'Nurture leads and retain customers with effective email marketing campaigns. We help you build subscriber lists, create engaging content, and track results to improve performance.',
+      id: 'other-services',
+      title: 'Other Services',
+      description: 'We offer a range of additional digital marketing services tailored to your specific business requirements and goals.',
       features: [
-        'Email campaign strategy',
-        'Template design',
-        'List segmentation',
-        'Automation setup',
-        'Analytics & reporting'
-      ]
+        'Custom marketing solutions',
+        'Competitor analysis',
+        'Market research',
+        'Conversion rate optimization',
+        'Marketing automation'
+      ],
+      gradient: 'from-gray-500 to-slate-500'
     }
   ];
 
@@ -114,7 +122,7 @@ const ServicesDetailsMore = () => {
   };
 
   return (
-    <section className="!pb-8">
+    <section className="!py-8">
       <div className="container !mx-auto">
         <div className="flex flex-col md:flex-row !gap-6 !p-5 md:!p-4 bg-gray-100">
           {/* Mobile Select Dropdown */}
