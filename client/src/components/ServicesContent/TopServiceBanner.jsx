@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaRocket, FaChartLine, FaAd, FaSearchDollar, FaHashtag, FaServer, FaMailBulk } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const TopServicesBanner = () => {
   const services = [
@@ -102,12 +103,14 @@ const TopServicesBanner = () => {
           transition={{ delay: 0.3 }}
           className="!mt-12 !text-center"
         >
-          <button className="!inline-flex !items-center !px-8 !py-4 !text-lg !font-bold !text-blue-900 !bg-gradient-to-r !from-cyan-400 !to-cyan-300 !rounded-lg !shadow-lg hover:!shadow-xl !transition-all !duration-300 hover:!scale-105">
-            Explore All Services
-            <svg className="!ml-3 !w-5 !h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <Link to='/pricing'>
+            <button className="!inline-flex !items-center !px-8 !py-4 !text-lg !font-bold !text-blue-900 !bg-gradient-to-r !from-cyan-400 !to-cyan-300 !rounded-lg !shadow-lg hover:!shadow-xl !transition-all !duration-300 hover:!scale-105 cursor-pointer">
+              Explore Pricing
+              <svg className="!ml-3 !w-5 !h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </Link>
         </motion.div>
       </div>
     </div>

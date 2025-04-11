@@ -2,25 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 import { IoGridSharp } from "react-icons/io5";
 import PopupContact from '../Others/PopupContact';
+import { Link } from 'react-router-dom';
 
 const PricingCards = () => {
   const services = {
-    'web dev': 'Web Development',
-    'SEO': 'Search Engine Optimization',
-    'GAA': 'Google Ads & Analytics',
-    'PPC': 'Pay-Per-Click Advertising',
-    'SMM': 'Social Media Marketing',
-    'SSM': 'Server & Site Maintenance',
+    'Web Development': 'Web Development',
+    'Search Engine Optimization': 'Search Engine Optimization',
+    'Google Ads': 'Google Ads',
+    'Pay-Per-Click': 'Pay-Per-Click Services',
+    'Social Media Marketing': 'Social Media Marketing',
+    'Lead Generation': 'Lead Generation',
     'Content Wrt': 'Content Writing'
   };
 
-  const [selectedService, setSelectedService] = useState('web dev');
+  const [selectedService, setSelectedService] = useState('Web Development');
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Pricing data for each service
   const pricingData = {
-    'web dev': [
+    'Web Development': [
       {
         name: 'Basic Website',
         price: '$520/-',
@@ -59,7 +60,7 @@ const PricingCards = () => {
         popular: true
       }
     ],
-    'SEO': [
+    'Search Engine Optimization': [
       {
         name: 'Start-up SEO',
         price: '$450/mo',
@@ -91,7 +92,7 @@ const PricingCards = () => {
         popular: false
       },
     ],
-    'GAA': [
+    'Google Ads': [
       {
         name: 'Start-up package',
         price: '$799/mo',
@@ -109,52 +110,56 @@ const PricingCards = () => {
         popular: true
       },
     ],
-    'PPC': [
+    'Pay-Per-Click': [
       {
-        name: 'Starter Ads',
-        price: '$499/mo',
-        features: ['1 campaign', 'Up to $500 ad spend', 'Basic targeting', 'Monthly optimization', 'Performance report'],
+        name: 'Growth Accelerator Package',
+        price: '$599/mo',
+        features: ['Google Ads + Meta Ads Management', 'Management of up to $3,000/month ad spend. Includes campaign setup, audience targeting, and ongoing bid adjustments.', 'Landing Page Optimization-One-time optimization: improved copy, layout, and call-to-action. Optional A/B testing add-on.', 'Keyword Research-Up to 15 high-intent keywords researched and optimized for campaigns.', 'Weekly Performance Reports-Detailed insights on clicks, conversions, and ROI.', '4 Ad Copy Variations/Month', 'Two for Google Ads, two for Meta Ads, with performance-driven tweaks.'],
+        bonus: 'Premium Bonuses – Absolutely FREE!',
+        bonusData: ['Website Speed Check - Comprehensive report with actionable fixes (valued at $199).', 'Email Marketing Starter Pack-  One email campaign setup (up to 500 subscribers) + basic automation (e.g., welcome email) (valued at $150).', 'Boost your Ads by Up to 15% in 75 Days – or Your Next Month’s Free!"', 'No lock-ins. No contract. Cancel anytime within 30 days.',],
         popular: false
       },
       {
-        name: 'Performance Ads',
-        price: '$999/mo',
-        features: ['3 campaigns', 'Up to $2000 ad spend', 'Advanced targeting', 'Weekly optimization', 'A/B testing'],
+        name: 'PPC Powerhouse Package',
+        price: '$849/mo',
+        features: ['Google Ads + Meta Ads Management', 'Up to $5,000 ad spend included (15% management fee beyond $5,000).', 'Campaign setup, audience targeting, and bid optimization.', '20 High-Quality Keywords', 'Researched and optimized for maximum ROI.', '6 Ad Copy Variations/Month', '3 for Google Ads, 3 for Meta Ads, performance-tested.', '1 Landing Page Optimization', 'One-time optimization (copy, design, CTA) + A/B testing setup.', 'Weekly Performance Reports', 'Detailed metrics on clicks, costs, and conversions.'],
+        bonus: 'Premium Bonuses – Absolutely FREE!',
+        bonusData: ['Website Speed Check', 'Full report with actionable fixes (valued at $199).', 'Email Marketing Starter Pack', '1 campaign setup + basic automation (up to 1,000 subscribers, valued at $425).', '1-Month SEO Booster Pack', 'On-page SEO (valued at $199).', 'Up to 17% improvement in CTR, CPC, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.'],
         popular: true
       },
       {
-        name: 'Enterprise Ads',
-        price: '$2499/mo',
-        features: ['Unlimited campaigns', 'Custom ad spend', 'AI optimization', 'Daily monitoring', 'Dedicated strategist'],
+        name: 'Elite Pro Package',
+        price: '$1499/mo',
+        features: ['Google Ads + Meta Ads Management', 'Up to $15,000 ad spend included.', 'Full campaign setup, advanced targeting, and bid optimization.', '40 High-Quality Keywords', 'Researched and optimized for maximum performance.', '8 Ad Copy Variations/Month', '4 for Google Ads, 4 for Meta Ads, tested and refined.', '2 Landing Page Optimizations/Month', 'Includes copy, design tweaks, and A/B testing setup.', 'Weekly Performance Reports + Monthly Strategy Call', 'Detailed analytics weekly + 30 - minute strategy session monthly.', '', '', ''],
+        bonus: 'Premium Bonuses – Absolutely FREE!',
+        bonusData: ['Website Speed Check', 'Comprehensive reports with fixes (valued at $199).', 'Email Marketing Setup', '2 campaigns + 1 automation (up to 5,000 subscribers, valued at $399).', '2-Month Advanced SEO Pack', 'website pages optimization, 7 high-quality backlinks, local SEO audit (valued at $1,199).', 'Up to 20% improvement in CTR, CPC, oг conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.' ],
         popular: false
-      }
+      },
     ],
-    'SMM': [
+    'Social Media Marketing': [
       {
-        name: 'Basic Management',
-        price: '$399/mo',
-        features: ['2 platforms', '12 posts/month', 'Content creation', 'Basic analytics', 'Community engagement'],
+        name: 'Launch-pad Package',
+        price: '$599/mo',
+        features: ['Platform Management', "Management of 2 social media platforms (e.g., Facebook + Instagram, or client's choice based on audience).", 'Profile setup and optimization (e.g., bio, branding, links).', 'Organic Content Creation & Posting', '6 high-quality posts/month .', 'Custom graphics or stock images, engaging captions, and hashtags.', 'Monthly content calendar for approval.', 'Paid Social Ad Campaigns', 'Management of up to $1,000 ad spend.', '2 paid ad campaigns/month (1 per platform, e.g., lead gen or traffic ads).', 'Basic ad creative (image-based) and targeting (e.g., local audience, interests).', '3 hour/week monitoring and responding comments/messages.', 'Analytics & weekly Reporting performance updates (reach, engagement, ad results).'],
+        bonus: 'Premium Bonuses – Absolutely FREE!',
+        bonusData: ['Social Media Mini-Audit: Quick review of current profiles with 3-5 improvement tips (valued at $149).', 'Ad Starter Credit: $50 credit toward your first ad spend (valued at $50).', '+ FREE 20 Emails for leads generation ( Valued $599)', 'Up to 10% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.'],
         popular: false
       },
       {
-        name: 'Growth Package',
-        price: '$799/mo',
-        features: ['4 platforms', '24 posts/month', 'Content strategy', 'Advanced analytics', 'Ad management'],
+        name: 'Social Media Mastery Plan',
+        price: '$1349/mo',
+        features: ['Platform Management', 'Full management of 3 social media platforms (e.g., Facebook, Instagram, Twitter/X, LinkedIn, based on client needs).', 'Account setup, profile optimization, and branding consistency.', 'Organic Content Creation & Posting', '12 high-quality posts/month (4 per platform).', "Custom graphics, captions, and hashtags tailored to the client's audience.", 'Content calendar provided monthly for approval.', 'Paid Social Ad Campaigns management of up to $5,000 ad spend.', '6 paid ad campaigns/month (2 per platform).', 'Ad creative design (images or short videos),', 'Copywriting, and targeting (e.g., demographics, interests, lookalike audiences).', 'Daily monitoring of comments, messages, and mentions.', 'Up to 6 hours/week of active engagement (e.g., responding to followers, sparking conversations).', 'Weekly performance reports'],
+        bonus: 'Premium Bonuses – Absolutely FREE!',
+        bonusData: ['Weekly strategy review call (30 minutes) to discuss results and adjust tactics (valued at $400).', 'Social Media Audit: One-time audit of current profiles with actionable recommendations (valued at $299).', 'Content Boost Pack (valued at $150)', '2 extra posts in the first month (valued at $100).', 'Analytics & Reporting (valued at $199)', 'Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.'],
         popular: true
       },
-      {
-        name: 'Premium Package',
-        price: '$1299/mo',
-        features: ['All platforms', 'Daily posting', 'Influencer collabs', 'Video content', 'Crisis management'],
-        popular: false
-      }
     ],
 
-    'SSM': [
+    'Lead Generation': [
       {
-        name: 'Basic Maintenance',
-        price: '$99/mo',
-        features: ['Weekly backups', 'Security updates', 'Uptime monitoring', 'Basic troubleshooting', 'Email support'],
+        name: 'Lead Starter Pack',
+        price: '$699/mo',
+        features: ['', '', '', '', '', '', '', '', '', '', ],
         popular: false
       },
       {
@@ -219,7 +224,7 @@ const PricingCards = () => {
         </div>
 
         {/* Service Selection Dropdown */}
-        <div className="flex justify-center !mb-16">
+        <div className="flex justify-center !mb-8">
           <div className="relative w-full !max-w-md">
             <div className="absolute !inset-y-0 left-0 flex items-center !pl-3 pointer-events-none">
               <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -242,6 +247,8 @@ const PricingCards = () => {
             </div>
           </div>
         </div>
+
+        <h3 className="max-w-3xl !mx-auto text-2xl text-center !mb-10 font-semibold " >Looking for customized <span className='text-blue-600'>{selectedService}</span> services? We design solutions tailored to your unique goals — <span className='text-blue-600'><Link to='/contact'>reach us</Link></span> to see how we can help you achieve them <span className='text-blue-600'>(FREE consultation)</span>.</h3>
 
         {/* Pricing Cards */}
         {isLoading ? (

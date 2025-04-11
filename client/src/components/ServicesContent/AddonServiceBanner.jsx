@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRocket, FaChartLine, FaHashtag, FaChartPie, FaPenFancy} from 'react-icons/fa';
+import { FaRocket, FaChartLine, FaHashtag, FaChartPie, FaPenFancy } from 'react-icons/fa';
 import { MdLeaderboard, MdBrandingWatermark } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const AddonServiceBanner = () => {
   const services = [
@@ -11,13 +12,13 @@ const AddonServiceBanner = () => {
     { name: "Reputation Management services", icon: <FaChartLine className="!text-2xl" /> },
     { name: "Weekly plan for SMM", icon: <FaChartPie className="!text-2xl" /> },
     { name: "Other Services", icon: <FaHashtag className="!text-2xl" /> },
-    
+
   ];
 
   return (
     <div className="!relative !py-16 !px-4 sm:!px-6 lg:!px-8 !overflow-hidden !bg-gradient-to-br !from-blue-900 !to-blue-700">
       {/* Animated background elements */}
-      <motion.div 
+      <motion.div
         animate={{
           rotate: [0, 360],
         }}
@@ -28,8 +29,8 @@ const AddonServiceBanner = () => {
         }}
         className="!absolute !-right-40 !-top-40 !w-80 !h-80 !bg-blue-800 !rounded-full !opacity-20"
       ></motion.div>
-      
-      <motion.div 
+
+      <motion.div
         animate={{
           rotate: [360, 0],
         }}
@@ -51,14 +52,14 @@ const AddonServiceBanner = () => {
         >
           <div className="!inline-flex !items-center !px-4 !py-2 !mb-4 !bg-blue-800 !bg-opacity-40 !rounded-full !text-sm !text-white !font-medium">
             <FaRocket className="!mr-2 !text-yellow-300" />
-            TOP ADDON SERVICES
+            TOP ADD-ON SERVICES
           </div>
           <h2 className="!text-4xl sm:!text-5xl !font-bold !text-white !mb-4">
-            <motion.span 
+            <motion.span
               className="!inline-block"
               whileHover={{ scale: 1.05 }}
             >
-              Premium Addon Solutions
+              Premium Add-on Solutions
             </motion.span> {" "}
             <br className="sm:!hidden" />
             <span className="!text-cyan-300">That Drive Results</span>
@@ -103,12 +104,14 @@ const AddonServiceBanner = () => {
           transition={{ delay: 0.3 }}
           className="!mt-12 !text-center"
         >
-          <button className="!inline-flex !items-center !px-8 !py-4 !text-lg !font-bold !text-blue-900 !bg-gradient-to-r !from-cyan-400 !to-cyan-300 !rounded-lg !shadow-lg hover:!shadow-xl !transition-all !duration-300 hover:!scale-105">
-            Explore All Services
-            <svg className="!ml-3 !w-5 !h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <Link to='/pricing'>
+            <button className="!inline-flex !items-center !px-8 !py-4 !text-lg !font-bold !text-blue-900 !bg-gradient-to-r !from-cyan-400 !to-cyan-300 !rounded-lg !shadow-lg hover:!shadow-xl !transition-all !duration-300 hover:!scale-105 cursor-pointer">
+              Explore Pricing
+              <svg className="!ml-3 !w-5 !h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </Link>
         </motion.div>
       </div>
     </div>
