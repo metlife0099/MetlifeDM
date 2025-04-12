@@ -17,6 +17,7 @@ import {
   FaBlog,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import LOGO from '../../assets/images/metlifeLogo.png'
 
 const Footer = () => {
   return (
@@ -26,9 +27,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 !mb-8">
           {/* First Column: Logo, Description, and Social Media Icons */}
           <div className="!space-y-4">
-            <h2 className='text-4xl text-blue-600 font-bold'>Metlife Dm</h2>
+            <div className=''>
+              <img src={LOGO} className="w-28 h-28 rounded-full" alt="" />
+            </div>
             <p className="text-white">
-              Ready to Grow with Metlifedm LLC? 
+              Ready to Grow with Metlifedm LLC?
               Based in the U.S., Serving the Nation
             </p>
             <div className="flex !space-x-4">

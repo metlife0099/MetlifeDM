@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import LOGO from '../../assets/images/metlifeLogo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,12 +57,11 @@ const Header = () => {
       className={`fixed w-full z-50 transition-colors duration-300 bg-white shadow-md`}
     >
       <div className="container">
-        <div className="flex justify-between items-center h-16 !mx-5 lg:mx-auto">
+        <div className="flex justify-between items-center h-20 !mx-5 lg:mx-auto">
           {/* Logo */}
-          <div className={`text-2xl sm:text-3xl font-bold ${
-            isScrolled ? "text-black" : "text-[#023E8A]"
-          }`}>
-            MetLife DM
+          <div className='w-16 h-16 flex items-center gap-1'>
+            <img src={LOGO} className="w-full h-full rounded-full" alt="" />
+            <h3 className="text-2xl font-bold"><span className="text-blue-600 ">Met</span>LifeDM <span className="text-blue-600 ">LLC</span></h3>
           </div>
 
           {/* Desktop Navigation */}

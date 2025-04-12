@@ -12,7 +12,10 @@ const PricingCards = () => {
     'Pay-Per-Click': 'Pay-Per-Click Services',
     'Social Media Marketing': 'Social Media Marketing',
     'Lead Generation': 'Lead Generation',
-    'Content Wrt': 'Content Writing'
+    'Brand Awarness': 'Brand Awarness',
+    'Content Creation': 'Content Creation',
+    'Email & SMS Marketing': 'Email & SMS Marketing',
+    'Reputation Management Services': 'Reputation Management Services',
   };
 
   const [selectedService, setSelectedService] = useState('Web Development');
@@ -157,44 +160,60 @@ const PricingCards = () => {
 
     'Lead Generation': [
       {
-        name: 'Lead Starter Pack',
-        price: '$699/mo',
-        features: ['', '', '', '', '', '', '', '', '', '', ],
+        name: 'Lead Generation Service',
+        price: 'ONLY When YOU Request',
+        features: ['Content Marketing', 'Search Engine Optimization (SEO)', 'Pay-Per-Click (PPC) Advertising', 'Social Media Marketing', 'Email Marketing', 'Landing Page Creation', 'Lead Magnet Development', 'Telemarketing', 'Webinar and Event Hosting', 'Lead Scoring and Qualification', 'CRM Integration and Management', 'Analytics and Reporting', 'Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.', 'Many more offers' ],
         popular: false
       },
-      {
-        name: 'Business Maintenance',
-        price: '$299/mo',
-        features: ['Daily backups', 'Priority updates', 'Performance optimization', 'Advanced security', 'Chat support'],
-        popular: true
-      },
-      {
-        name: 'Premium Maintenance',
-        price: '$599/mo',
-        features: ['Real-time backups', '24/7 monitoring', 'Emergency support', 'Server optimization', 'Phone support'],
-        popular: false
-      }
     ],
-    'Content Wrt': [
+
+    'Brand Awarness': [
       {
-        name: 'Starter Content',
-        price: '$199/mo',
-        features: ['4 blog posts', 'Basic research', 'SEO optimization', '1 revision', 'Standard turnaround'],
+        name: 'Brand Awarness',
+        price: 'ONLY When YOU Request',
+        features: ['Content Marketing', 'Social Media Marketing', 'Search Engine Optimization (SEO)', 'Pay-Per-Click (PPC) Advertising', 'Public Relations (PR)', 'Influencer Marketing', 'Email Marketing', 'Event Sponsorship or Hosting', 'Referral Programs', 'Display Advertising', 'Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.', 'Many more offers'],
+        popular: false
+      },
+    ],
+
+    'Content Creation': [
+      {
+        name: 'Content Creation',
+        price: 'ONLY When YOU Request',
+        features: ['Writing & Research ', 'Visual content ', 'Interactive & Development ', 'Collaboration & Management ', 'Social Media & Marketing ', 'AI & Automation', 'Analytics & Feedback', 'Specialized Niches', 'Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.', 'Many more offers'],
+        popular: false
+      },
+    ],
+
+    'Email & SMS Marketing': [
+      {
+        name: 'Email Marketing',
+        price: 'ONLY When YOU Request',
+        features: ['List Segmentation and Targeting', 'Email Campaign Strategy and Planning', 'Content Creation and Copywriting', 'Email Design and Templates', 'Email Automation (Workflows, Autoresponders)', 'Email Sending and Scheduling', 'A/B Testing (Split Testing)', 'Performance Tracking and Analytics Reporting', 'Deliverability Management and Compliance', 'Integration with Other Platforms (CRM, etc.)', 'Lead Generation (Forms, Landing Pages)', 'Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.', 'Many more offers'],
         popular: false
       },
       {
-        name: 'Professional Content',
-        price: '$499/mo',
-        features: ['8 blog posts', 'In-depth research', 'Advanced SEO', '2 revisions', 'Priority turnaround'],
-        popular: true
+        name: 'WhatsApp Marketing',
+        price: 'ONLY When YOU Request',
+        features: ['Business Profile Setup and Verification', 'Contact List Management (including Opt-in collection)', 'Broadcast/Bulk Messaging (Promotions, Newsletters, Updates)', 'Automated Notifications (Order confirmations, shipping updates, reminders)', 'Chatbot Development and Deployment (for automated replies and flows)', 'Personalized Messaging Campaigns', 'Rich Media Communication (Images, Videos, Documents, Buttons)', ' Interactive Messages (Quick Replies, Call-to-Action Buttons, List Messages)', 'Product Catalog Creation and Sharing', 'Click-to-WhatsApp Ad Campaigns (via Facebook/Instagram)', 'Retargeting Campaigns', 'Analytics and Reporting', ' Integration with CRM and other business systems', 'Customer Support and Service via chat', 'WhatsApp Payments Facilitation (where available)', 'Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.', 'Many more offers'],
+        popular: false
       },
       {
-        name: 'Enterprise Content',
-        price: '$999/mo',
-        features: ['16 blog posts', 'Expert research', 'Content strategy', 'Unlimited revisions', 'Express delivery'],
+        name: 'SMS Marketing',
+        price: 'ONLY When YOU Request',
+        features: ['Bulk/Mass SMS Sending', 'Contact List Management (including opt-in/opt-out)', 'Audience Segmentation', 'Personalization (using contact data)', 'Two-Way Messaging/Conversational SMS', 'Automated Campaigns (Drip, Welcome, Reminders)', 'Transactional SMS (Alerts, Confirmations, Notifications)', 'Message Scheduling', 'Keyword Management (for opt-in/interaction)', 'Short Code/Long Code Provisioning', 'MMS (Multimedia Messaging) Capabilities', 'Performance Analytics and Reporting', 'API Integration Capabilities', 'Compliance Management Tools', 'Link Shortening and Tracking', 'Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.', 'Many more offers'],
         popular: false
-      }
-    ]
+      },
+    ],
+
+    'Reputation Management Services': [
+      {
+        name: 'Reputation Management Services',
+        price: 'ONLY When YOU Request',
+        features: ['Online Monitoring & Analysis', 'Review Management', 'SEO & Search Engine Reputation', 'Social Media Management', 'PR & Media Relations', 'Crisis Management', 'Legal & Removal Services', 'Customer Feedback & Surveys', 'Employer Branding','Trending strategies', 'Up to 15% improvement in reach, engagement, or conversions within 75 days, or your next month is FREE.', 'No lock-ins. No contract. Cancel anytime within 30 days.', 'Many more offers'],
+        popular: false
+      },
+    ],
   };
 
   useEffect(() => {
