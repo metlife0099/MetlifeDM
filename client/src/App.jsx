@@ -8,8 +8,9 @@ import Footer from './components/Footer/Footer'
 import FAQ from './pages/FAQ'
 import About from './pages/About'
 import Pricing from './pages/Pricing'
-import Testimonials from './pages/Testimonials'
 import ScrollToTop from './components/Others/ScrollToTop'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
 
 const App = () => {
   return (
@@ -22,9 +23,11 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsConditions />} />
       </Routes>
       <Footer />
       </BrowserRouter>

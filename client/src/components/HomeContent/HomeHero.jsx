@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import Image1 from '../../assets/images/banner1.jpg';
 import Image2 from '../../assets/images/banner2.jpeg';
@@ -7,62 +7,62 @@ import { Link } from "react-router-dom";
 
 const HomeHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const images = [
     {
       src: Image1,
-      heading: "Tech Troubles? We’ve Got You Covered!",
-      heading2: "Need to Fix Your Laptop, Mobile, or PC? We're Here to Help!",
-      description: "From diagnostics to repairs, we ensure your devices are back in action quickly with professional service and quality assurance.",
-      buttonText: "Learn More",
-      buttonLink: "/repair-services"
+      heading: "Digital Marketing That Drives Results",
+      heading2: "Grow Your Business with Our Proven Digital Strategies",
+      description: "From SEO to social media marketing, we create campaigns that increase visibility, engagement, and conversions for your business.",
+      buttonText: "Explore Services",
+      buttonLink: "/services"
     },
     {
       src: Image2,
-      heading: "Simplifying IT, Amplifying Success",
-      heading2: "Enhance Your PC Performance with Our Expert IT Solutions!",
-      description: "Transform your business with our tailored IT services, including network management, software development, and 24/7 support designed to keep your systems running seamlessly.",
-      buttonText: "Get Started",
-      buttonLink: "/it-solutions"
+      heading: "Comprehensive Digital Solutions",
+      heading2: "All-In-One Digital Marketing Packages with Custom Packages",
+      description: "Our tailored packages include Web Dev, SEO, PPC, content marketing, and social media management - all designed to maximize your online presence.",
+      buttonText: "View Pricing",
+      buttonLink: "/pricing"
     },
     {
       src: Image3,
-      heading: "Your Growth, Our Mission",
-      heading2: "Want to Grow Your Business? We’ve Got the Perfect Web Design & Digital Marketing Solutions!",
-      description: "Maximize your online presence with data-driven digital marketing solutions, from targeted ads to conversion optimization, to ensure measurable growth.",
-      buttonText: "Start Now",
-      buttonLink: "/digital-marketing-services"
+      heading: "Data-Driven Marketing Success",
+      heading2: "Measurable Results with Advanced Analytics",
+      description: "We don't just create campaigns - we track, analyze, and optimize every aspect to ensure maximum ROI for your marketing dollars.",
+      buttonText: "Get Started",
+      buttonLink: "/contact"
     },
   ];
 
-  // Function to handle slide change
-  const handleSlideChange = (index) => {
-    setCurrentSlide(index);
-  };
-
-  // Function to go to the next slide
-  const goToNextSlide = () => {
+  const goToNextSlide = useCallback(() => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  };
+  }, [images.length]);
 
-  // Function to go to the previous slide
-  const goToPreviousSlide = () => {
-    setCurrentSlide(
-      (prevSlide) => (prevSlide - 1 + images.length) % images.length
-    );
-  };
+  const goToPreviousSlide = useCallback(() => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+  }, [images.length]);
+
+  const handleSlideChange = useCallback((index) => {
+    setIsAutoPlaying(false);
+    setCurrentSlide(index);
+    setTimeout(() => setIsAutoPlaying(true), 5000);
+  }, []);
 
   useEffect(() => {
-    const intervalId = setInterval(goToNextSlide, 10000); // Change slide every 4 seconds
-
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
-  }, []);
+    let intervalId;
+    if (isAutoPlaying) {
+      intervalId = setInterval(goToNextSlide, 5000);
+    }
+    return () => clearInterval(intervalId);
+  }, [goToNextSlide, isAutoPlaying]);
 
   return (
     <div className="!pt-5 relative">
       <div className="w-full h-[80vh] sm:h-[90vh] overflow-hidden relative">
         <div
-          className="relative w-full h-full !mt-0 md:!mt-10 flex transition-transform duration-1000 ease-in-out"
+          className="relative w-full h-full !mt-0 md:!mt-10 flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {images.map((image, index) => (
@@ -76,14 +76,14 @@ const HomeHero = () => {
               }}
             >
               {/* Content Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/35 !bg-opacity-40 ">
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/35 !bg-opacity-40">
                 <div className="text-center text-white !px-4 max-w-[700px]">
                   <p className="text-md sm:text-lg md:text-xl font-bold !mb-2 text-textColor">{image.heading}</p>
-                  <h1 className="text-xl sm:text-2xl md:text-3xl font-bold !mb-5">{image.heading2}</h1>
-                  <p className="!mb-8 text-[12px] sm:text-[14px] md:text-[16px]">{image.description}</p>
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold !mb-5">{image.heading2}</h1>
+                  <p className="!mb-8 text-sm sm:text-base md:text-lg">{image.description}</p>
                   <Link
                     to={image.buttonLink}
-                    className=" bg-transparent border-2 border-solid border-green300 hover:bg-green300 hover:text-white transition-all font-bold !p-1 rounded-xl !py-2 !px-5"
+                    className="inline-block bg-transparent border-2 border-solid border-green300 hover:bg-green300 hover:text-white transition-all font-bold !p-1 rounded-xl !py-2 !px-5"
                   >
                     {image.buttonText}
                   </Link>
@@ -94,50 +94,41 @@ const HomeHero = () => {
         </div>
       </div>
 
-      {/* Left Arrow */}
-      <div
-        onClick={goToPreviousSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75"
+      {/* Navigation Arrows */}
+      <button
+        onClick={() => {
+          setIsAutoPlaying(false);
+          goToPreviousSlide();
+        }}
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
+        aria-label="Previous slide"
       >
         <MdOutlineKeyboardArrowLeft size={30} />
-      </div>
+      </button>
 
-      {/* Right Arrow */}
-      <div
-        onClick={goToNextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75"
+      <button
+        onClick={() => {
+          setIsAutoPlaying(false);
+          goToNextSlide();
+        }}
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
+        aria-label="Next slide"
       >
         <MdOutlineKeyboardArrowRight size={30} />
-      </div>
+      </button>
 
-      {/* Radio buttons for manual navigation */}
-      <div className="flex justify-center items-center absolute bottom-2 left-1/2 transform -translate-x-1/2">
+      {/* Slide Indicators */}
+      <div className="flex justify-center items-center absolute bottom-4 left-1/2 transform -translate-x-1/2 space-x-2">
         {images.map((_, index) => (
-          <label key={index} htmlFor={`slide-${index}`}>
-            <input
-              type="radio"
-              id={`slide-${index}`}
-              name="slide"
-              checked={index === currentSlide}
-              onChange={() => handleSlideChange(index)}
-              className="hidden" // Hides the radio input
-            />
-            <span
-              className={`w-2.5 h-2.5 rounded-full mx-1 cursor-pointer transition-colors duration-200 ${index === currentSlide ? 'bg-black' : 'bg-gray-400'
-                }`}
-              style={{
-                display: 'inline-block',
-                borderRadius: '50%',
-                width: '10px', // Decreased size
-                height: '10px', // Decreased size
-                backgroundColor: index === currentSlide ? 'black' : '#c4c4c4', // Black for active, gray for inactive
-              }}
-            />
-          </label>
+          <button
+            key={index}
+            onClick={() => handleSlideChange(index)}
+            className={`w-3 h-3 rounded-full transition-colors duration-200 focus:outline-none ${index === currentSlide ? 'bg-white' : 'bg-gray-400'}`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
         ))}
       </div>
     </div>
-
   );
 };
 

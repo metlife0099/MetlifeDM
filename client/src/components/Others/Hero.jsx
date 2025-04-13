@@ -17,10 +17,10 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, Testi
   }, [controls]);
 
   return (
-    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden !bg-blue-500">
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden !bg-blue-500">
       {/* Background Image with Parallax Effect */}
       <motion.div
-        className="absolute inset-0 w-full h-[80vh] bg-cover bg-center"
+        className="absolute inset-0 w-full !mt-1 h-[90vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${heroContent?.HeroImage})` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -29,7 +29,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, Testi
       >
         {/* Blue Gradient Overlay */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-blue-400/50 via-blue-200/30 to-indigo-400/50"
+          className="absolute inset-0 bg-gradient-to-br from-blue-300/30 via-blue-100/20 to-indigo-300/30"
           initial={{ opacity: 0.7 }}
           animate={{ opacity: isHovered ? 0.9 : 0.7 }}
           transition={{ duration: 0.5 }}

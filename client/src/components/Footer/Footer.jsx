@@ -148,11 +148,11 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/blog"
+                  to="/pricing"
                   className="text-white hover:text-blue-500 transition-all flex items-center !space-x-2"
                 >
                   <FaBlog className="w-4 h-4 text-blue-500" />
-                  <span>Blog</span>
+                  <span>Pricing</span>
                 </Link>
               </li>
             </ul>

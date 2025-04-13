@@ -3,7 +3,6 @@ import contactHeroImage from "../images/contactHero.jpg";
 import FAQHeroImage from "../images/faqHero.jpg";
 import AboutHeroImage from "../images/aboutHero.jpg";
 import PricingHeroImage from "../images/pricingHero.jpg";
-import TestimonialHeroImage from "../images/testimonialHero.jpg";
 
 export const serviceHero = {
   id: 1,
@@ -33,7 +32,7 @@ export const AboutHero = {
   id: 4,
   title: "Who We Are",
   description:
-    "Metlifedm: your US growth machine. We fuse bold digital strategies with killer results, turning your brand into a powerhouse of clicks and cash.",
+    "Metlifedm: your Business growth machine. We fuse bold digital strategies with killer results, turning your brand into a powerhouse of clicks and cash.",
   HeroImage: AboutHeroImage,
 };
 
@@ -43,12 +42,4 @@ export const PricingHero = {
   description:
     "No surprises, just success! Metlifedm’s plans bring top-tier digital marketing to US businesses, with clear pricing and insane ROI. Pick your power today.",
   HeroImage: PricingHeroImage,
-};
-
-export const TestimonialHero = {
-  id: 6,
-  title: "What Our Clients Say",
-  description:
-    "US brands cheer for Metlifedm! Clients rave about game-changing traffic and profits from our digital magic. Your success story’s next—jump in!",
-  HeroImage: TestimonialHeroImage,
 };
