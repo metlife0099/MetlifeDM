@@ -21,7 +21,7 @@ const HomeHero = () => {
     {
       src: Image2,
       heading: "Comprehensive Digital Solutions",
-      heading2: "All-In-One Digital Marketing Packages with Custom Packages",
+      heading2: "All-In-One Digital Marketing Services with Custom Packages",
       description: "Our tailored packages include Web Dev, SEO, PPC, content marketing, and social media management - all designed to maximize your online presence.",
       buttonText: "View Pricing",
       buttonLink: "/pricing"

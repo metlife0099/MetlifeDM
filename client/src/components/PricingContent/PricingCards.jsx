@@ -28,38 +28,38 @@ const PricingCards = () => {
       {
         name: 'Basic Website',
         price: '$520/-',
-        features: ['Up to 5 pages', 'Responsive design', 'Contact form', '1 month support', 'Social media integration', '1 month SEO booster pack FREE worth $199', '+ 27 promotional emails FREE worth $135', '+ 5% discount on monthly website maintenance.'],
+        features: ['Up to 6 pages', 'Mobile-first, responsive design', 'WordPress CMS for easy updates', 'Lead-capturing contact form', 'Social media integration', '2 months of priority support', 'FREE: 1-month SEO pack (keyword research, up to 1 optimized pages, Google My Business setup $199 value)', 'FREE 27 High-Conversion Emails: Pre-built campaigns ($135 value)', '10% OFF Maintenance: For 6 months'],
         popular: false
       },
       {
         name: 'Pro-level Basic Website',
         price: '$699/-',
-        features: ['5-8 pages', 'Responsive design (mobile-first)', 'Contact form + Google Analytics setup', '2 months of priority support', 'Social media integration (all platforms) + branded kit', 'FREE 1-Month SEO Launchpad: 10 keywords to kickstart rankings ($199 value)', 'FREE 54 High-Conversion Emails: Pre-designed & automated ($270 value)', 'FREE Domain: Up to $50 value', '15% OFF Maintenance: 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
+        features: ['5-8 pages', 'Responsive design (mobile-first)', 'Contact form + Google Analytics setup', '2 months of priority support', 'Social media integration (all platforms) + branded kit', 'FREE 1-Month SEO Launchpad: 10 keywords to kickstart rankings ($199 value)', 'FREE 54 High-Conversion Emails: Pre-designed & automated ($270 value)', 'FREE Domain: Up to $50 value', '15% OFF Maintenance: 3 months',],
         popular: true
       },
       {
         name: 'Business Website',
         price: '$899/-',
-        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'FREE Domain: Up to $75.00', 'FREE SSL Certificate', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 170 High-Conversion Emails: Pre-built campaigns ($850 value)', '2 months of priority support', '1-2 rounds of revision', '10% OFF Maintenance: For 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
+        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'FREE Domain: Up to $75.00', 'FREE SSL Certificate', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 170 High-Conversion Emails: Pre-built campaigns ($850 value)', '2 months of priority support', '1-2 rounds of revision', '10% OFF Maintenance: For 3 months',],
         popular: false
       },
       {
         name: 'Pro-level Business Website',
         price: '$1149/-',
-        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'Social media integration (all platforms)', 'FREE Domain: Up to $75', 'FREE SSL Certificate', 'FREE Payment Integration: Accept payments fast ($75 value)', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 200 High-Conversion Emails: Pre-built campaigns ($1,000 value)', '2 months of priority support', '1-2 rounds of revision', '15% OFF Maintenance: For 3 months', '20% OFF Monthly SEO: For 3 months', 'Launch Guarantee: Live in 30 days or 50% back!'],
+        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'Social media integration (all platforms)', 'FREE Domain: Up to $75', 'FREE SSL Certificate', 'FREE Payment Integration: Accept payments fast ($75 value)', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 200 High-Conversion Emails: Pre-built campaigns ($1,000 value)', '2 months of priority support', '1-2 rounds of revision', '15% OFF Maintenance: For 3 months', '20% OFF Monthly SEO: For 3 months'],
         popular: true
       },
 
       {
         name: 'E-commerce website',
         price: '$1750/-',
-        features: ['Custom web design, responsive + speed- optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30- Day Advanced SEO Launchpad: 15 keywords + content ($850 value)', 'FREE 300 High-Conversion Emails: Pre-built campaigns ($1,500 value)', 'FREE Google Analytics Report: ($399 value)', '2 months of priority support ($500 value)', '2-3 rounds of revision', '10% OFF Maintenance: For 3 months', 'Launch Guarantee: Store live in 30 days or 50% back!',],
+        features: ['Custom web design, responsive + speed- optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30- Day Advanced SEO Launchpad: 15 keywords + content ($850 value)', 'FREE 300 High-Conversion Emails: Pre-built campaigns ($1,500 value)', 'FREE Google Analytics Report: ($399 value)', '2 months of priority support ($500 value)', '2-3 rounds of revision', '10% OFF Maintenance: For 3 months', ],
         popular: false
       },
       {
         name: 'Pro-level E-commerce website',
         price: '$2050/-',
-        features: ['Custom web design, responsive + speed-optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30 Day Advanced SEO Launchpad: 15 keywords + links ($1,000 value)', '* FREE 400 High-Conversion Emails: Pre-built campaigns ($2,000 value)', 'FREE Google Analytics Report: ($399 value)', 'FREE Brand Awareness Boost: ($150 value)', 'FREE Reputation Management: ($450 value)', '2 months of priority support ($500 value)', '3-4 rounds of revision', '10% OFF Maintenance: For 3 months', '* Launch Guarantee: Store live in 30 days or 50% back!'],
+        features: ['Custom web design, responsive + speed-optimized', 'Product catalog, shopping cart, checkout system', 'Payment gateway integration + inventory management', 'Full authentication, admin panel, order management', 'Tax/shipping setup + email invoice notifications', 'FREE Domain: Up to $100', 'FREE SSL Certificate', 'FREE Payment Gateway Setup: ($99 value)', 'FREE 30 Day Advanced SEO Launchpad: 15 keywords + links ($1,000 value)', '* FREE 400 High-Conversion Emails: Pre-built campaigns ($2,000 value)', 'FREE Google Analytics Report: ($399 value)', 'FREE Brand Awareness Boost: ($150 value)', 'FREE Reputation Management: ($450 value)', '2 months of priority support ($500 value)', '3-4 rounds of revision', '10% OFF Maintenance: For 3 months'],
         popular: true
       }
     ],

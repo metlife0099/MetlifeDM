@@ -84,7 +84,7 @@ const ContactForm = () => {
 
                   <div>
                     <label htmlFor="pnumber" className="block text-sm font-medium text-gray-700 !mb-1">
-                      Phone Number
+                      Phone Number <span className="text-red-500">*</span>
                     </label>
                     <div className="relative">
                       <div className="absolute !inset-y-0 left-0 !pl-3 flex items-center pointer-events-none">
@@ -94,6 +94,7 @@ const ContactForm = () => {
                         id="pnumber"
                         name="pnumber"
                         type="tel"
+                        required
                         className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="+1 555-555-5555"
                       />
@@ -156,6 +157,50 @@ const ContactForm = () => {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="minBudget" className="block text-sm font-medium text-gray-700 !mb-1">
+                      Minimum Budget
+                    </label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 !pl-3 flex items-center pointer-events-none">
+                        <HiUser className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        id="minBudget"
+                        name="minBudget"
+                        type="number"
+                        min={20}
+                        className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="$20"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="maxBudget" className="block text-sm font-medium text-gray-700 !mb-1">
+                      Maximum Budget
+                    </label>
+                    <div className="relative">
+                      <div className="absolute !inset-y-0 left-0 !pl-3 flex items-center pointer-events-none">
+                        <HiPhone className="h-5 w-5 text-gray-400" />
+                      </div>
+                      <input
+                        id="maxBudget"
+                        name="maxBudget"
+                        type="number"
+                        min={21}
+                        className="block w-full !pl-10 !pr-3 !py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="$99999..."
+                      />
+                    </div>
+                  </div> 
+                </div>
+
+                <div>
+                  <p className="text-sm text-gray-500 !-mt-5">Only for custom crafted services</p>
+                </div>
+                
                 <div>
                   <label htmlFor="comment" className="block text-sm font-medium text-gray-700 !mb-1">
                     Message <span className="text-red-500">*</span>
@@ -174,7 +219,7 @@ const ContactForm = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full flex justify-center items-center !py-3 !px-4 border border-transparent rounded-lg shadow-sm text-white font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors ${isSubmitting ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+                    className={`w-full flex justify-center items-center !py-3 !px-4 border border-transparent rounded-lg shadow-sm text-white font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors cursor-pointer ${isSubmitting ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
                       }`}
                   >
                     {isSubmitting ? (
