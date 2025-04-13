@@ -29,7 +29,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, Testi
       >
         {/* Blue Gradient Overlay */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-blue-500/50 via-blue-400/30 to-indigo-500/50"
+          className="absolute inset-0 bg-gradient-to-br from-blue-400/50 via-blue-200/30 to-indigo-400/50"
           initial={{ opacity: 0.7 }}
           animate={{ opacity: isHovered ? 0.9 : 0.7 }}
           transition={{ duration: 0.5 }}
@@ -76,7 +76,7 @@ const Hero = ({ serviceHero, contactHero, FAQHero, AboutHero, PricingHero, Testi
           className="text-4xl sm:text-5xl md:text-6xl font-bold !mb-6 text-white drop-shadow-lg"
           whileHover={{ scale: 1.02 }}
         >
-          <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-600 to-indigo-800 bg-clip-text text-transparent">
             {heroContent?.title}
           </span>
         </motion.h2>

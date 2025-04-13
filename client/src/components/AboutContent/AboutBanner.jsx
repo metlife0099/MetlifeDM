@@ -1,5 +1,5 @@
 import React from 'react';
-import AbtBanner from '../../assets/images/homeBanner.jpg';
+import AbtBanner from '../../assets/images/aboutCont.jpg';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaRegPaperPlane } from 'react-icons/fa';
 
@@ -72,7 +72,7 @@ const AboutBanner = () => {
             <img 
               src={AbtBanner} 
               alt="Metlifedm LLC Team" 
-              className='relative w-full h-auto max-h-[550px] object-cover rounded-xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 z-10' 
+              className='relative w-full h-[350px] md:h-[550px] object-cover rounded-xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 z-10' 
             />
           </div>
         </div>
