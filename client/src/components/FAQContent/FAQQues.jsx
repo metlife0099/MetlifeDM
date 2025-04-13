@@ -77,10 +77,10 @@ const FAQQues = () => {
 
         <div className="!text-center !mb-16">
           <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
-          Frequently <span className="!text-blue-500">asked questions </span>
+            Before you ask Google… <span className="text-blue-600">Check Here</span>(FAQ's)
           </h2>
           <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
-          Got questions? we've got power-packed answers!
+            Got questions? we've got power-packed answers!
           </p>
         </div>
 

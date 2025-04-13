@@ -61,7 +61,7 @@ const Header = () => {
           {/* Logo */}
           <div className='w-16 h-16 flex items-center gap-1'>
             <img src={LOGO} className="w-full h-full rounded-full" alt="" />
-            <h3 className="text-2xl font-bold"><span className="text-blue-600 ">Met</span>LifeDM <span className="text-blue-600 ">LLC</span></h3>
+            <h3 className="text-3xl font-bold"><span className="text-blue-600 ">Met</span>lifedm </h3>
           </div>
 
           {/* Desktop Navigation */}

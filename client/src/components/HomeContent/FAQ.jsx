@@ -53,7 +53,7 @@ const FAQ = () => {
 
           <div className="text-center !mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
-              Frequently <span className="text-blue-600">asked questions</span>
+              Before you ask Google… <span className="text-blue-600">Check Here</span>(FAQ's)
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
               Get answers to your most pressing questions about our digital marketing services

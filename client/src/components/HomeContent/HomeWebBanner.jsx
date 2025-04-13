@@ -129,7 +129,7 @@ const HomeWebBanner = () => {
             className="lg:w-1/2 !mb-8 lg:!mb-0"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold !mb-6">
-              Professional <span className="text-blue-400">Website</span> Development
+            Empowering <span className="text-blue-400">American Brands</span> for Next-Level Growth
             </h1>
             <p className="text-xl !mb-8 text-gray-300">
               We build powerful websites using WordPress, Shopify, and custom CMF solutions tailored to your business needs.

@@ -68,7 +68,7 @@ const AboutUsContent = () => {
             <div className="absolute !-inset-4 !bg-gradient-to-r !from-blue-400 !to-purple-500 !rounded-xl !opacity-25 !filter !blur-lg"></div>
             <div className="!relative !bg-white !rounded-xl !p-8 !h-full !shadow-xl">
               <h3 className="!text-2xl !font-bold !text-gray-900 !mb-6">
-                We're not your average digital marketing crew
+              We’re not your typical agency —  <span className="text-blue-600"> We’re Metlifedm</span>.
               </h3>
               <p className="!text-gray-600 !leading-relaxed !mb-6">
                 At Metlifedm LLC, we're a team of relentless innovators, data-driven strategists, and creative powerhouses who live for one thing: solving your toughest growth challenges with solutions that hit hard and deliver fast.

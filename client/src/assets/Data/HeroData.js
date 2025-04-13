@@ -46,6 +46,6 @@ export const TestimonialHero = {
   id: 5,
   title: "See what are client says",
   description:
-    "Welcome to Metlifedm LLC, where your digital growth isn’t just a promise—it’s a freakin’ explosion waiting to happen!",
+    "The Results speak loud — but our clients speak ((( LOUDER ))) with Metlifedm!",
   HeroImage: TestimonialHeroImage,
 };

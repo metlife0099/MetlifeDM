@@ -235,7 +235,7 @@ const PricingCards = () => {
       <div className="container">
         <div className="!text-center !mb-16">
           <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
-            Best <span className="!text-blue-500">value </span>deals
+          Choose Your <span className="!text-blue-500">Service </span>
           </h2>
           <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
             Pricing that ignites your growth!

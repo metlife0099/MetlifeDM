@@ -220,7 +220,7 @@ const ServicesCont = () => {
       <div className="container mx-auto !px-5 lg:px-0">
         <div className="!text-center !mb-16">
           <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
-          We are <span className="!text-blue-500">best at </span>
+          America’s <span className="!text-blue-500">Digital Kings: </span>Annihilating Websites, Seo, Ads, Branding — <br /> <span className="!text-blue-500">"Everything"</span> 
           </h2>
           <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
           Fuel your brand. Dominate the digital world with
