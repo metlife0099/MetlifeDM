@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import Image1 from '../../assets/images/banner1.jpg';
-import Image2 from '../../assets/images/banner2.jpeg';
-import Image3 from '../../assets/images/banner3.jpg';
+import Image1 from '../../assets/images/banner1.webp';
+import Image2 from '../../assets/images/banner2.webp';
+import Image3 from '../../assets/images/banner3.webp';
 import { Link } from "react-router-dom";
 
 const HomeHero = () => {
