@@ -34,19 +34,19 @@ const PricingCards = () => {
       {
         name: 'Pro-level Basic Website',
         price: '$699/-',
-        features: ['5-8 pages', 'Responsive design (mobile-first)', 'Contact form + Google Analytics setup', '2 months of priority support', 'Social media integration (all platforms) + branded kit', 'FREE 1-Month SEO Launchpad: 10 keywords to kickstart rankings ($199 value)', 'FREE 54 High-Conversion Emails: Pre-designed & automated ($270 value)', 'FREE Domain: Up to $50 value', '15% OFF Maintenance: 3 months',],
+        features: ['Up to 8 pages', 'Responsive design (mobile-first)', 'Contact form + Google Analytics setup', '2 months of priority support', 'Social media integration (all platforms) + branded kit', 'FREE 1-Month SEO Launchpad: 10 keywords to kickstart rankings ($199 value)', 'FREE 54 High-Conversion Emails: Pre-designed & automated ($270 value)', 'FREE Domain: Up to $50 value', '15% OFF Maintenance: 3 months',],
         popular: true
       },
       {
         name: 'Business Website',
         price: '$899/-',
-        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'FREE Domain: Up to $75.00', 'FREE SSL Certificate', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 170 High-Conversion Emails: Pre-built campaigns ($850 value)', '2 months of priority support', '1-2 rounds of revision', '10% OFF Maintenance: For 3 months',],
+        features: ['Up to 10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'FREE Domain: Up to $75.00', 'FREE SSL Certificate', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 170 High-Conversion Emails: Pre-built campaigns ($850 value)', '2 months of priority support', '1-2 rounds of revision', '10% OFF Maintenance: For 3 months',],
         popular: false
       },
       {
         name: 'Pro-level Business Website',
         price: '$1149/-',
-        features: ['1-10 pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'Social media integration (all platforms)', 'FREE Domain: Up to $75', 'FREE SSL Certificate', 'FREE Payment Integration: Accept payments fast ($75 value)', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 200 High-Conversion Emails: Pre-built campaigns ($1,000 value)', '2 months of priority support', '1-2 rounds of revision', '15% OFF Maintenance: For 3 months', '20% OFF Monthly SEO: For 3 months'],
+        features: ['Up to 10+ pages with custom web design', 'Responsive, speed-optimized layout', 'Contact form + Google Analytics setup', 'Content upload + Google Maps integration', 'Social media integration (all platforms)', 'Social media integration (all platforms)', 'FREE Domain: Up to $75', 'FREE SSL Certificate', 'FREE Payment Integration: Accept payments fast ($75 value)', 'FREE 1-Month SEO Launchpad: 10 keywords + setup ($299 value)', 'FREE 200 High-Conversion Emails: Pre-built campaigns ($1,000 value)', '2 months of priority support', '1-2 rounds of revision', '15% OFF Maintenance: For 3 months', '20% OFF Monthly SEO: For 3 months'],
         popular: true
       },
 

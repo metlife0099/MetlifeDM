@@ -12,7 +12,7 @@ const HomeHero = () => {
   const images = [
     {
       src: Image1,
-      heading: "Digital Marketing That Drives Results",
+      slogan: "Digital Marketing That Drives Results",
       heading2: "Grow Your Business with Our Proven Digital Strategies",
       description: "From SEO to social media marketing, we create campaigns that increase visibility, engagement, and conversions for your business.",
       buttonText: "Explore Services",
@@ -20,7 +20,7 @@ const HomeHero = () => {
     },
     {
       src: Image2,
-      heading: "Comprehensive Digital Solutions",
+      slogan: "Comprehensive Digital Solutions",
       heading2: "All-In-One Digital Marketing Services with Custom Packages",
       description: "Our tailored packages include Web Dev, SEO, PPC, content marketing, and social media management - all designed to maximize your online presence.",
       buttonText: "View Pricing",
@@ -28,7 +28,7 @@ const HomeHero = () => {
     },
     {
       src: Image3,
-      heading: "Data-Driven Marketing Success",
+      slogan: "Data-Driven Marketing Success",
       heading2: "Measurable Results with Advanced Analytics",
       description: "We don't just create campaigns - we track, analyze, and optimize every aspect to ensure maximum ROI for your marketing dollars.",
       buttonText: "Get Started",
@@ -76,14 +76,14 @@ const HomeHero = () => {
               }}
             >
               {/* Content Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/35 !bg-opacity-40">
-                <div className="text-center text-white !px-4 max-w-[700px]">
-                  <p className="text-md sm:text-lg md:text-xl font-bold !mb-2 text-textColor">{image.heading}</p>
-                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold !mb-5">{image.heading2}</h1>
-                  <p className="!mb-8 text-sm sm:text-base md:text-lg">{image.description}</p>
+              <div className="absolute inset-0 flex items-center justify-center ">
+                <div className="text-center !px-4 max-w-[700px]">
+                  <p className="text-md sm:text-lg md:text-xl font-bold text-white !mb-2 text-textColor">{image.slogan}</p>
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 !mb-5">{image.heading2}</h1>
+                  <p className="!mb-8 text-sm sm:text-base md:text-lg text-white">{image.description}</p>
                   <Link
                     to={image.buttonLink}
-                    className="inline-block bg-transparent border-2 border-solid border-green300 hover:bg-green300 hover:text-white transition-all font-bold !p-1 rounded-xl !py-2 !px-5"
+                    className="inline-block bg-transparent border-2 border-solid border-white hover:bg-green300 hover:text-white transition-all font-bold !p-1 rounded-xl !py-2 !px-5 text-white"
                   >
                     {image.buttonText}
                   </Link>
