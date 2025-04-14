@@ -58,6 +58,15 @@ const HomeHero = () => {
     return () => clearInterval(intervalId);
   }, [goToNextSlide, isAutoPlaying]);
 
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = Image1;
+    document.head.appendChild(link);
+  }, []);
+
+
   return (
     <div className="!pt-5 relative">
       <div className="w-full h-[80vh] sm:h-[90vh] overflow-hidden relative">
@@ -78,7 +87,7 @@ const HomeHero = () => {
               {/* Content Overlay */}
               <div className="absolute inset-0 flex items-center justify-center ">
                 <div className="text-center !px-4 max-w-[700px]">
-                  <p className="text-md sm:text-lg md:text-xl font-bold text-white !mb-2 text-textColor">{image.slogan}</p>
+                  <p className="text-sm sm:text-base md:text-lg font-bold text-white mb-2">{image.slogan}</p>
                   <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 !mb-5">{image.heading2}</h1>
                   <p className="!mb-8 text-sm sm:text-base md:text-lg text-white">{image.description}</p>
                   <Link
