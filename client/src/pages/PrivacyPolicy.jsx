@@ -330,7 +330,7 @@ const PrivacyPolicy = () => {
             <p className="!mb-6">For questions or to exercise your rights:</p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="mailto:privacy@metlifedm.com" className="flex items-center justify-center hover:text-teal-200 transition-colors">
-                <FiMail className="!mr-2" /> privacy@metlifedm.com
+                <FiMail className="!mr-2" /> growtogether@metlifedm.com
               </Link>
               <Link to="tel:1-800-ENERGY" className="flex items-center justify-center hover:text-teal-200 transition-colors">
                 <FiPhone className="!mr-2" /> 1-800-ENERGY
@@ -338,7 +338,7 @@ const PrivacyPolicy = () => {
             </div>
             <div className="!mt-6">
               <p className="flex items-center justify-center">
-                <FiHome className="!mr-2" /> Metlifedm LLC, [insert physical address]
+                <FiHome className="!mr-2" /> Metlifedm LLC, #571 Nassau Delaware 19969
               </p>
             </div>
           </div>

@@ -169,7 +169,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center !space-x-3">
                 <FaEnvelope className="text-blue-500 w-5 h-5" />
-                <span className="text-white">letsbuit@ar.miami</span>
+                <span className="text-white">growtogether@metlifedm.com</span>
               </li>
               <li className="flex items-center !space-x-3">
                 <FaMapMarkerAlt className="text-blue-500 w-5 h-5" />

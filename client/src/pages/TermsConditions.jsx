@@ -308,7 +308,7 @@ const TermsConditions = () => {
             <p className="!mb-6">For questions about these Terms, please contact us:</p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="mailto:connect@metlifedm.com" className="flex items-center justify-center hover:text-blue-200 transition-colors">
-                <FiMail className="!mr-2" /> connect@metlifedm.com
+                <FiMail className="!mr-2" /> growtogether@metlifedm.com
               </Link>
               <Link to="tel:1-800-ENERGY" className="flex items-center justify-center hover:text-blue-200 transition-colors">
                 <FiPhone className="!mr-2" /> 1-800-ENERGY
