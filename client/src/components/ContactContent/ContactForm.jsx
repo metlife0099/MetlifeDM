@@ -43,7 +43,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-1/2 order-2 lg:order-1">
             <div className="rounded-2xl overflow-hidden shadow-xl h-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.956153315275!2d-80.21070922481651!3d25.772011777345472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b692e6051e35%3A0xe2f2e7b3fc0ac9c4!2s821%20SW%202nd%20St%20APT%2010%2C%20Miami%2C%20FL%2033130%2C%20USA!5e0!3m2!1sen!2sin!4v1737027518754!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.634866208199!2d-75.17321322425843!3d38.749140371756184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b8b9cee93ad2e3%3A0xd7362132825d3bba!2sUnited%20States%20Postal%20Service!5e0!3m2!1sen!2sin!4v1745865602915!5m2!1sen!2sin"
                 className="w-full h-full min-h-[400px]"
                 allowFullScreen=""
                 loading="lazy"

@@ -173,7 +173,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center !space-x-3">
                 <FaMapMarkerAlt className="text-blue-500 w-5 h-5" />
-                <span className="text-white">1717 N bayshore dr , #108 miami FL 33132</span>
+                <span className="text-white">#571 Nassau Delaware 19969</span>
               </li>
             </ul>
           </div>

@@ -5,26 +5,30 @@ import Call from '../../assets/gifIcons/phone.gif'
 import Address from '../../assets/gifIcons/location.gif'
 import Support from '../../assets/gifIcons/support.gif'
 import Calender from '../../assets/gifIcons/upcoming.gif'
+import { Link } from 'react-router-dom';
 
 const ContactCards = () => {
   const cards = [
     {
       icon: Email,
       title: "Email Us",
-      info: "info@yourcompany.com",
+      info: "growtogether@metlifedm.com",
       action: "Mail Now",
+      link: 'mailto:growtogether@metlifedm.com'
     },
     {
       icon: Call,
       title: "Call Us",
       info: "+1 (555) 123-4567",
       action: "Call Now",
+      link: 'tel:15551234567'
     },
     {
       icon: Address,
       title: "Our Location",
-      info: "123 Business Ave, Suite 456, Miami, FL",
+      info: "#571 Nassau Delaware 19969",
       action: "Get Directions",
+      link: 'https://www.google.com/maps/place/United+States+Postal+Service/@38.7491404,-75.1732132,17z/data=!3m2!4b1!5s0x89b8b9ce2d27be85:0xfc92eae955f49ce4!4m6!3m5!1s0x89b8b9cee93ad2e3:0xd7362132825d3bba!8m2!3d38.7491404!4d-75.1706383!16s%2Fg%2F1q62klb12?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D'
     },
     {
       icon: Support,
@@ -43,13 +47,13 @@ const ContactCards = () => {
   return (
     <section className="!py-12 !px-4 sm:!px-6 lg:!px-8 bg-gray-50">
       <div className="container">
-        
+
         <div className="!text-center !mb-16">
           <h2 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
-          Get in <span className="!text-blue-500">touch</span> now
+            Get in <span className="!text-blue-500">touch</span> now
           </h2>
           <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
-          Get in touch with us through any of these channels
+            Get in touch with us through any of these channels
           </p>
         </div>
 
@@ -72,11 +76,13 @@ const ContactCards = () => {
                 <p className="text-gray-600 group-hover:text-white group-hover:text-opacity-90 !mb-4 transition-colors duration-500">
                   {card.info}
                 </p>
-                <button
-                  className="!px-4 !py-2 bg-indigo-600 text-white rounded-lg font-medium shadow-md group-hover:bg-white group-hover:text-indigo-600 transform group-hover:-translate-y-1 transition-all duration-500 cursor-pointer"
-                >
-                  {card.action}
-                </button>
+                <Link to={card.link}>
+                  <button
+                    className="!px-4 !py-2 bg-indigo-600 text-white rounded-lg font-medium shadow-md group-hover:bg-white group-hover:text-indigo-600 transform group-hover:-translate-y-1 transition-all duration-500 cursor-pointer"
+                  >
+                    {card.action}
+                  </button>
+                </Link>
               </div>
 
               {/* Animated border effect */}
