@@ -12,7 +12,6 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <meta name="google-site-verification" content="zOo5mDIS73dG0bMDz6uZq6aFIhd7uGRph2WRoWa13sQ" />
         <title>Your Page Title</title>
         <meta name="description" content="Your page description" />
       </Helmet>
