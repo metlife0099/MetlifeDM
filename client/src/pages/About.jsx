@@ -5,6 +5,7 @@ import AboutBanner from '../components/AboutContent/AboutBanner'
 import AboutCards from '../components/AboutContent/AboutCards'
 import AboutUsContent from '../components/AboutContent/AboutUsContent'
 import CallToAction from '../components/Others/CallToAction'
+import { Helmet } from 'react-helmet'
 
 const About = () => {
   return (

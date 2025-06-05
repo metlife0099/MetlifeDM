@@ -128,9 +128,9 @@ const HomeWebBanner = () => {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 !mb-8 lg:!mb-0"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold !mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold !mb-6">
             Empowering <span className="text-blue-400">American Brands</span> for Next-Level Growth
-            </h1>
+            </h2>
             <p className="text-xl !mb-8 text-gray-300">
               We build powerful websites using WordPress, Shopify, and custom CMF solutions tailored to your business needs.
             </p>
@@ -157,7 +157,7 @@ const HomeWebBanner = () => {
             {/* Stats */}
             <div className="flex !gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">500+</div>
+                <div className="text-3xl font-bold text-blue-400">20+</div>
                 <div className="text-gray-400">Projects</div>
               </div>
               <div className="text-center">

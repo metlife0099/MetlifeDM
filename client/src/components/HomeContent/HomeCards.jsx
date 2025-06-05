@@ -11,22 +11,23 @@ const aboutCard = [
   {
     icon: Icon1,
     title: 'Proven Track Record of Success',
-    description: 'We\'ve helped businesses across industries achieve higher conversions, increased website traffic, and stronger brand visibility through cutting-edge digital marketing strategies.',
-  },
-  {
-    icon: Icon2,
-    title: 'Data-Driven & ROI-Focused Strategies',
-    description: 'Every Dollar Spent Should Drive Results – That\'s Our ROI-Focused Approach.',
+    description: "We\'ve helped businesses across industries achieve higher conversions, increased website traffic, and stronger brand visibility through cutting-edge digital marketing strategies.",
   },
   {
     icon: Icon3,
-    title: 'Certified Digital Marketing Experts',
-    description: 'Our team consists of Google Ads-certified professionals, SEO specialists, and social media strategists who stay ahead of the latest marketing trends.',
+    title: 'Always on the cutting edge of SEO',
+    description: "With 93% of search starting on search engines, it's rank or perish. Our experts employ on-page, off-page, and semantic search engine optimization techniques to get you found for what your users are really searching for."
   },
   {
+    icon: Icon2,
+    title: 'Web Development That Converts',
+    description: "Your website is not a page—it's your welcoming handshake on the internet. We build blazing-fast, responsive websites for conversions, SEO, and trust."
+  },
+  
+  {
     icon: Icon4,
-    title: 'Transparent Reporting & Real-Time Insights',
-    description: 'We believe in 100% transparency—you\'ll always know where your marketing budget is going. Get detailed reports and access to real-time data on your campaign performance.',
+    title: 'Campaigns Built Around You',
+    description: "Whether you require leads, sales, or visibility, we don't subscribe to cookie-cutter solutions. Each campaign is created solely for you depending on : Audience behavior, Market studies, Your business objectives"
   },
   {
     icon: Icon5,
@@ -70,7 +71,7 @@ const HomeCards = () => {
 
         <div className="text-center !mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
-            Why partner with <span className="text-blue-600">Metlifedm?</span>
+            Why Metlifedm is the <span className="text-blue-600">Best Digital Marketing</span> Agency in Miami
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
           At Metlifedm, we don't just market—we drive real, measurable growth. Our data-driven strategies ensure your business stands out in the competitive US market.

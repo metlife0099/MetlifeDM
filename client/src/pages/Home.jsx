@@ -7,6 +7,7 @@ import HomeWebContent from '../components/HomeContent/HomeWebContent'
 import HomeWebBanner from '../components/HomeContent/HomeWebBanner'
 import CallToAction from '../components/Others/CallToAction'
 import { Helmet } from 'react-helmet';
+import HomeAbout from '../components/HomeContent/HomeAbout'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
 
       <HomeHero />
       <HomeBanner />
+      <HomeAbout />
       <HomeWebBanner />
       <HomeWebContent />
       <HomeCards />

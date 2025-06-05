@@ -79,7 +79,7 @@ const HomeHero = () => {
               <div className="absolute inset-0 flex items-center justify-center ">
                 <div className="text-center !px-4 max-w-[700px]">
                   <p className="text-md sm:text-lg md:text-xl font-bold text-white !mb-2 text-textColor">{image.slogan}</p>
-                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 !mb-5">{image.heading2}</h1>
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 !mb-5">{image.heading2}</h2>
                   <p className="!mb-8 text-sm sm:text-base md:text-lg text-white">{image.description}</p>
                   <Link
                     to={image.buttonLink}

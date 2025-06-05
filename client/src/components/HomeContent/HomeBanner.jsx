@@ -5,7 +5,7 @@ import Image from '../../assets/images/homeBanner.jpg';
 
 const HomeBanner = () => {
   const phoneNumber = '+17862109819';
-  
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,7 +53,7 @@ const HomeBanner = () => {
           className="flex flex-col lg:flex-row gap-12 items-center"
         >
           {/* Image */}
-          <motion.div 
+          <motion.div
             variants={imageVariants}
             className="lg:w-1/2 overflow-hidden rounded-xl shadow-2xl"
           >
@@ -71,39 +71,47 @@ const HomeBanner = () => {
           </motion.div>
 
           {/* Content */}
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             className="lg:w-1/2 space-y-6"
           >
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-lg font-medium text-blue-600 flex items-center !mb-2"
             >
-              <span className="inline-block w-12 h-1 bg-blue-600 !mr-3"></span> 
+              <span className="inline-block w-12 h-1 bg-blue-600 !mr-3"></span>
               Grow Your Business with Data-Driven Digital Marketing.
             </motion.p>
 
-            <motion.h2 
+            <motion.h1
               variants={itemVariants}
               className="text-2xl sm:text-4xl font-bold text-gray-800 leading-tight"
             >
-              We help businesses scale with <span className="text-blue-600">SEO, PPC, and social media</span> marketing.
-            </motion.h2>
+              Your Digital Roadmap to Success Starts with <span className="text-blue-600"> Metlifedm – Miami, FL's Best Digital Marketing</span> Agency.
+            </motion.h1>
 
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-lg text-gray-600 text-[14px] !mt-2"
             >
-              Transform your interiors into breathtaking spaces that reflect your personality and style. Our expert interior design services blend functionality with elegance, creating custom designs tailored to your vision. Whether you’re dreaming of a modern kitchen, a cozy living room, or a luxurious office, we bring ideas to life with curated color palettes, premium materials, and thoughtful layouts.
+              It started with a routine telephone call.
+
+              "I've tried everything," complained one small business owner, exasperated by having spent time and money on web marketing campaigns that failed to deliver. "My site is not seen. My ads won't convert. I just want to grow."
             </motion.p>
-            <motion.p 
+            <motion.p
               variants={itemVariants}
               className="text-lg text-gray-600 text-[14px] !mt-2"
             >
-              From concept to completion, we handle everything — lighting, furniture selection, décor, and finishes — ensuring every detail adds to the harmony of your home or commercial space. Let us create an environment you’ll love to live and work in.
+              That call wasn't made to any agency—rather, it was made to Metlifedm, Miami's rapidly emerging digital marketing agency that is definitely rewriting the rules of online expansion.
+            </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-lg text-gray-600 text-[14px] !mt-2"
+            >
+              What began as a single call evolved into a revolution—not just for a single business but for hundreds in Miami and beyond. Metlifedm is now considered the top digital marketing agency in Miami, FL, due to a combination of strategy, storytelling, and data-driven implementation.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="!mt-8 flex flex-wrap items-center gap-4"
             >
@@ -132,13 +140,13 @@ const HomeBanner = () => {
             </motion.div>
 
             {/* Trust indicators */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="!mt-12 flex flex-wrap gap-6 items-center"
             >
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-green-500 rounded-full !mr-2"></div>
-                <span className="text-gray-700">375+ Successful Campaigns</span>
+                <span className="text-gray-700">15+ Successful Campaigns</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-green-500 rounded-full !mr-2"></div>
