@@ -9,6 +9,11 @@ import CallToAction from '../components/Others/CallToAction'
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>The Metlifedm Journey That’s Turning Heads in Miami</title>
+        <meta name="description" content="Discover why Metlifedm is Miami's go-to digital marketing agency. From SEO and web development to social media marketing, see how they turn ideas into digital success." />
+      </Helmet>
+
       <Hero AboutHero={AboutHero} />
       <AboutUsContent />
       <AboutBanner />
