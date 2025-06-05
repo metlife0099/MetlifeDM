@@ -99,12 +99,12 @@ const Header = () => {
                 <span className="font-medium">+1 (123) 456-7890</span>
               </div>
               <Link to='tel:+17896548765'>
-                <button className="bg-[#023E8A] text-white text-xs sm:text-sm !px-2 sm:!px-3 !py-1 rounded hover:bg-[#03045E] transition-colors whitespace-nowrap">
+                <button className="bg-[#023E8A] text-white text-xs sm:text-sm !px-2 sm:!px-3 !py-1 rounded hover:bg-[#03045E] transition-colors whitespace-nowrap cursor-pointer">
                   Call Now
                 </button>
               </Link>
               <Link to='/contact'>
-                <button className="bg-gray-700 text-white text-xs sm:text-sm !px-2 sm:!px-3 !py-1 rounded hover:bg-gray-800 transition-colors whitespace-nowrap">
+                <button className="bg-gray-700 text-white text-xs sm:text-sm !px-2 sm:!px-3 !py-1 rounded hover:bg-gray-800 transition-colors whitespace-nowrap cursor-pointer">
                   Inquiry
                 </button>
               </Link>
