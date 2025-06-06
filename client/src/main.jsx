@@ -4,10 +4,13 @@ import './index.css'
 import App from './App.jsx'
 import React from 'react'
 import ChatBot from './components/Others/ChatBot.jsx'
+import { HelmetProvider } from 'react-helmet-async';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
-    <ChatBot />
+    <HelmetProvider>
+      <App />
+      <ChatBot />
+    </HelmetProvider>
   </StrictMode>,
 )

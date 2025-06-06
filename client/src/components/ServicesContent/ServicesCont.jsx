@@ -220,7 +220,7 @@ const ServicesCont = () => {
       <div className="container mx-auto !px-5 lg:px-0">
         <div className="!text-center !mb-16">
           <h1 className="!text-4xl md:!text-6xl !font-bold !text-gray-900 !mb-2">
-          How the Best SEO & Wev Development Company <span className="!text-blue-500">in Miami </span>is Changing the <span className="!text-blue-500">Digital Game</span> for Local Brands
+          How the Best SEO & Web Development Company <span className="!text-blue-500">in Miami </span>is Changing the <span className="!text-blue-500">Digital Game</span> for Local Brands
           </h1>
           <p className="!text-xl !text-gray-600 !max-w-3xl !mx-auto">
           Fuel your brand. Dominate the digital world with
