@@ -31,26 +31,33 @@ const ServicesDetails = () => {
 
   const services = [
     {
-      title: 'Website Development',
-      description: 'We create responsive, user-friendly websites that drive engagement and conversions. Our development process focuses on performance, security, and scalability to ensure your online presence stands out.',
+      title: 'Web Development',
+      subTitle: 'Looking for a Top Website Development Company in Miami?',
+      description: 'As a leading Miami website development company, we specialize in building responsive, user-friendly websites that captivate visitors and convert them into customers. At our website development company in Miami, we focus on performance, security, and scalability to elevate your online presence.',
+      keyf: "Why We're the Best SEO Company in Miami:",
       features: [
-        'Custom website design',
-        'Mobile-responsive development',
-        'E-commerce solutions',
-        'CMS integration',
-        'Ongoing maintenance'
-      ]
+        'Custom Website Design',
+        'Mobile-Responsive Development',
+        'E-Commerce Solutions',
+        'CMS Integration',
+        'Ongoing Maintenance'
+      ],
+
+      subDesc: "Whether you're a startup or an established business, trust the top website development company in Miami to bring your digital vision to life."
     },
     {
-      title: 'Search Engine Optimization (SEO)',
-      description: 'Improve your website\'s visibility in search engine results with our comprehensive SEO services. We use ethical, white-hat techniques to help you rank higher and attract more organic traffic.',
+      title: 'Search Engine Optemization (SEO)',
+      subTitle: 'Partner with the Best SEO Company in Miami for Real Results',
+      description: 'Boost your website’s visibility and drive qualified traffic with our proven SEO strategies. As a trusted SEO agency in Miami, we use ethical, white-hat techniques to help your business rank higher on search engines and attract consistent, organic traffic.',
+      keyf: "Why We're the Best SEO Company in Miami:",
       features: [
         'Keyword research & strategy',
         'On-page optimization',
         'Technical SEO audits',
         'Link building',
         'Local SEO optimization'
-      ]
+      ],
+      subDesc: "Let our experienced team at the leading SEO agency in Miami take your digital presence to the next level."
     },
     {
       title: 'Google Ads & Analytics',
@@ -200,10 +207,20 @@ const ServicesDetails = () => {
                   {services[activeTab].title}
                 </h2>
               </div>
+              <div className=" !px-6 !pt-6 ">
+                <h3 className="!text-xl md:!text-2xl !font-bold !text-gray-800">
+                  {services[activeTab].subTitle}
+                </h3>
+              </div>
               <div className="!p-6">
                 <p className="!text-gray-700 !mb-6">{services[activeTab].description}</p>
                 <div className="!space-y-3">
-                  <h4 className="!font-semibold !text-lg !text-gray-800">Key Features:</h4>
+                  <h4 className="!font-semibold !text-lg !text-gray-800">
+                    {
+                      // services.keyf ? `${services.keyf}` : "Key Feature"
+                      services[activeTab].keyf ? `${services[activeTab].keyf}` : "Key Feature"
+                    }
+                  </h4>
                   <ul className="!space-y-2">
                     {services[activeTab].features.map((feature, idx) => (
                       <li key={idx} className="!flex !items-start">
@@ -225,6 +242,7 @@ const ServicesDetails = () => {
                       </li>
                     ))}
                   </ul>
+                  <p className="!text-gray-700 !my-6 text-gray-700">{services[activeTab].subDesc}</p>
                 </div>
               </div>
             </div>
