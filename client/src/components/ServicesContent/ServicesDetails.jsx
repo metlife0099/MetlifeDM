@@ -242,7 +242,7 @@ const ServicesDetails = () => {
                       </li>
                     ))}
                   </ul>
-                  <p className="!text-gray-700 !my-6 text-gray-700">{services[activeTab].subDesc}</p>
+                  <p className="!text-gray-700 !my-6">{services[activeTab].subDesc}</p>
                 </div>
               </div>
             </div>
