@@ -1,6 +1,7 @@
 import { FaWordpress, FaShopify, FaEdit, FaArrowRight, FaPhone, FaEnvelope, FaTimes, FaCode, FaServer, FaChartLine } from 'react-icons/fa';
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence, useAnimation } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HomeWebBanner = () => {
   const controls = useAnimation();
@@ -93,14 +94,14 @@ const HomeWebBanner = () => {
   ];
 
   return (
-    <div 
+    <div
       ref={bannerRef}
       className="relative overflow-hidden !py-16 !px-4 md:!px-8 lg:!px-12 bg-gradient-to-r from-gray-900 to-gray-800 text-white"
     >
       {/* Background animation elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         {[...Array(20)].map((_, i) => (
-          <div 
+          <div
             key={i}
             className="absolute rounded-full bg-white"
             style={{
@@ -129,14 +130,14 @@ const HomeWebBanner = () => {
             className="lg:w-1/2 !mb-8 lg:!mb-0"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold !mb-6">
-            Empowering <span className="text-blue-400">American Brands</span> for Next-Level Growth
+              Empowering <span className="text-blue-400">American Brands</span> for Next-Level Growth
             </h2>
             <p className="text-xl !mb-8 text-gray-300">
               We build powerful websites using WordPress, Shopify, and custom CMF solutions tailored to your business needs.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row !gap-4 !mb-12">
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsContactModalOpen(true)}
@@ -144,7 +145,7 @@ const HomeWebBanner = () => {
               >
                 Get Started <FaArrowRight />
               </motion.button>
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsLearnModalOpen(true)}
@@ -172,6 +173,7 @@ const HomeWebBanner = () => {
           </motion.div>
 
           {/* Platform cards */}
+
           <motion.div
             initial="hidden"
             animate={controls}
@@ -183,22 +185,24 @@ const HomeWebBanner = () => {
             className="lg:w-1/2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 !gap-6"
           >
             {platforms.map((platform, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 }
-                }}
-                transition={{ delay: platform.delay, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                className={`${platform.color} rounded-xl !p-6 shadow-lg transition-all duration-300 flex flex-col items-center text-center`}
-              >
-                <div className="!mb-4">
-                  {platform.icon}
-                </div>
-                <h3 className="text-xl font-bold !mb-2">{platform.name}</h3>
-                <p className="text-gray-200">{platform.description}</p>
-              </motion.div>
+              <Link to='/pricing'>
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
+                  transition={{ delay: platform.delay, duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                  className={`${platform.color} rounded-xl !p-6 shadow-lg transition-all duration-300 flex flex-col items-center text-center`}
+                >
+                  <div className="!mb-4">
+                    {platform.icon}
+                  </div>
+                  <h3 className="text-xl font-bold !mb-2">{platform.name}</h3>
+                  <p className="text-gray-200">{platform.description}</p>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         </div>
@@ -229,11 +233,11 @@ const HomeWebBanner = () => {
               >
                 <FaTimes className="w-6 h-6" />
               </motion.button>
-              
+
               <h3 className="text-2xl font-bold text-gray-800 !mb-6 text-center">
                 How would you like to contact us?
               </h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 !gap-4">
                 {contactOptions.map((option, index) => (
                   <motion.a
@@ -255,7 +259,7 @@ const HomeWebBanner = () => {
                   </motion.a>
                 ))}
               </div>
-              
+
               <p className="text-gray-500 text-sm !mt-6 text-center">
                 We typically respond within 1 business day
               </p>
@@ -289,7 +293,7 @@ const HomeWebBanner = () => {
               >
                 <FaTimes className="w-6 h-6" />
               </motion.button>
-              
+
               <div className="flex flex-col md:flex-row !gap-8">
                 <div className="md:w-1/2">
                   <h3 className="text-2xl font-bold text-gray-800 !mb-6">

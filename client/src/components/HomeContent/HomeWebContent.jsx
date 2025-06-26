@@ -1,5 +1,6 @@
 import { FaWordpress, FaShopify, FaCode, FaMobileAlt, FaServer, FaChartLine } from 'react-icons/fa';
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeWebContent = () => {
   const slidingLineRef = useRef(null);
@@ -10,7 +11,7 @@ const HomeWebContent = () => {
       const animateLine = () => {
         slidingLine.style.transform = 'translateX(100%)';
         slidingLine.style.transition = 'transform 8s linear';
-        
+
         setTimeout(() => {
           slidingLine.style.transform = 'translateX(-100%)';
           slidingLine.style.transition = 'none';
@@ -19,7 +20,7 @@ const HomeWebContent = () => {
           }, 50);
         }, 8000);
       };
-      
+
       animateLine();
     }
   }, []);
@@ -66,16 +67,16 @@ const HomeWebContent = () => {
   return (
     <div className="relative overflow-hidden !py-12 !px-4 md:!px-8 lg:!px-12 bg-gray-50">
       {/* Sliding line animation */}
-      <div 
+      <div
         ref={slidingLineRef}
         className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent transform -translate-x-full"
       ></div>
-      
+
       <div className="container">
         {/* Header */}
         <div className="text-center !mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
-          Unleash a <span className="text-blue-600">Jaw-Dropping Website</span> with Ease
+            Unleash a <span className="text-blue-600">Jaw-Dropping Website</span> with Ease
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
             Our platform makes website creation as simple as WordPress and Shopify, but with the power of custom development.
@@ -83,20 +84,22 @@ const HomeWebContent = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className={`${service.color} rounded-xl !p-8 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg`}
-            >
-              <div className="!mb-6">
-                {service.icon}
+        <Link to='/services'>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`${service.color} rounded-xl !p-8 shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg`}
+              >
+                <div className="!mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 !mb-3">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 !mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Link>
 
         {/* Feature Showcase */}
         <div className="!mt-20 bg-white rounded-xl shadow-lg overflow-hidden">
@@ -118,7 +121,7 @@ const HomeWebContent = () => {
                   <span className="text-gray-700">Customizable components</span>
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-blue-600 rounded-full !mr-3"></span>
                   <span className="text-gray-700">Real-time preview</span>
                 </li>
               </ul>

@@ -6,6 +6,7 @@ import Icon3 from '../../assets/icons/badge.png';
 import Icon4 from '../../assets/icons/transparency.png';
 import Icon5 from '../../assets/icons/solution.png';
 import Icon6 from '../../assets/icons/bullhorn.png';
+import { Link } from 'react-router-dom';
 
 const aboutCard = [
   {
@@ -23,7 +24,7 @@ const aboutCard = [
     title: 'Web Development That Converts',
     description: "Your website is not a page—it's your welcoming handshake on the internet. We build blazing-fast, responsive websites for conversions, SEO, and trust."
   },
-  
+
   {
     icon: Icon4,
     title: 'Campaigns Built Around You',
@@ -61,7 +62,7 @@ const HomeCards = () => {
   return (
     <section className='!py-16 bg-gradient-to-b from-white to-gray-50'>
       <div className="container !mx-auto !px-4 sm:!px-6 lg:!px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -69,54 +70,56 @@ const HomeCards = () => {
           className="text-center !mb-16"
         >
 
-        <div className="text-center !mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
-            Why Metlifedm is the <span className="text-blue-600">Best Digital Marketing</span> Agency in Miami
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
-          At Metlifedm, we don't just market—we drive real, measurable growth. Our data-driven strategies ensure your business stands out in the competitive US market.
-          </p>
-        </div>
+          <div className="text-center !mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 !mb-4">
+              Why Metlifedm is the <span className="text-blue-600">Best Digital Marketing</span> Agency in Miami
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl !mx-auto">
+              At Metlifedm, we don't just market—we drive real, measurable growth. Our data-driven strategies ensure your business stands out in the competitive US market.
+            </p>
+          </div>
 
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {aboutCard.map((item, index) => (
-            <motion.div
-              key={index}
-              initial="offscreen"
-              whileInView="onscreen"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={cardVariants}
-              whileHover={{ y: -10 }}
-              className="relative group"
-            >
-              <div className="h-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transition-all duration-500 ease-out">
-                {/* Hover background element - slides in from right */}
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-teal-500 opacity-0 group-hover:opacity-100 transition-all duration-500 origin-right scale-x-0 group-hover:scale-x-100 z-0"></div>
-                
-                {/* Content */}
-                <div className="relative z-10 h-full flex flex-col !p-8 transition-all duration-500">
-                  <div className="mb-6 w-16 h-16 rounded-lg bg-indigo-100 flex items-center justify-center group-hover:bg-white/90 transition-all duration-500">
-                    <img 
-                      src={item.icon} 
-                      alt={item.title} 
-                      className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-0 group-hover:invert !mb-2" 
-                    />
+        <Link to='/services'>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aboutCard.map((item, index) => (
+              <motion.div
+                key={index}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={cardVariants}
+                whileHover={{ y: -10 }}
+                className="relative group"
+              >
+                <div className="h-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transition-all duration-500 ease-out">
+                  {/* Hover background element - slides in from right */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-teal-500 opacity-0 group-hover:opacity-100 transition-all duration-500 origin-right scale-x-0 group-hover:scale-x-100 z-0"></div>
+
+                  {/* Content */}
+                  <div className="relative z-10 h-full flex flex-col !p-8 transition-all duration-500">
+                    <div className="mb-6 w-16 h-16 rounded-lg bg-indigo-100 flex items-center justify-center group-hover:bg-white/90 transition-all duration-500">
+                      <img
+                        src={item.icon}
+                        alt={item.title}
+                        className="w-10 h-10 object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-0 group-hover:invert !mb-2"
+                      />
+                    </div>
+
+                    <h3 className="text-xl font-bold text-gray-800 !mb-4 group-hover:text-white transition-colors duration-300">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-600 flex-grow group-hover:text-white/90 transition-colors duration-300">
+                      {item.description}
+                    </p>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-800 !mb-4 group-hover:text-white transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 flex-grow group-hover:text-white/90 transition-colors duration-300">
-                    {item.description}
-                  </p>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        </Link>
       </div>
     </section>
   );

@@ -114,20 +114,22 @@ const HomeAbout = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className={`group bg-gray-900 rounded-2xl !p-8 border border-gray-800 hover:border-blue-600 transition-all duration-500 hover:transform hover:scale-105 hover:bg-gray-800 animate-fadeInUp ${feature.delay}`}
-                >
-                  <div className="text-blue-600 !mb-6 group-hover:text-blue-500 transition-colors duration-300 transform group-hover:scale-110">
-                    {feature.icon}
+                <Link to='/about'>
+                  <div
+                    key={index}
+                    className={`group bg-gray-900 rounded-2xl !p-8 border border-gray-800 hover:border-blue-600 transition-all duration-500 hover:transform hover:scale-105 hover:bg-gray-800 animate-fadeInUp ${feature.delay}`}
+                  >
+                    <div className="text-blue-600 !mb-6 group-hover:text-blue-500 transition-colors duration-300 transform group-hover:scale-110">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold !mb-4 text-white group-hover:text-blue-100 transition-colors duration-300">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold !mb-4 text-white group-hover:text-blue-100 transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                    {feature.description}
-                  </p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -142,19 +144,21 @@ const HomeAbout = () => {
 
                 <div className="grid sm:grid-cols-3 gap-6 !mb-12">
                   {steps.map((step, index) => (
-                    <div key={index} className="text-center group">
-                      <div className="bg-blue-600/20 rounded-full w-16 h-16 flex items-center justify-center !mx-auto !mb-4 group-hover:bg-blue-600/40 transition-all duration-300 group-hover:scale-110">
-                        <div className="text-blue-600 group-hover:text-blue-500">
-                          {step.icon}
+                    <Link to='/services'>
+                      <div key={index} className="text-center group">
+                        <div className="bg-blue-600/20 rounded-full w-16 h-16 flex items-center justify-center !mx-auto !mb-4 group-hover:bg-blue-600/40 transition-all duration-300 group-hover:scale-110">
+                          <div className="text-blue-500 group-hover:text-blue-800">
+                            {step.icon}
+                          </div>
                         </div>
+                        <h4 className="font-semibold text-gray-800 !mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                          {step.title}
+                        </h4>
+                        <p className="text-sm text-gray-400 group-hover:text-gray-500 transition-colors duration-300">
+                          {step.description}
+                        </p>
                       </div>
-                      <h4 className="font-semibold text-gray-800 !mb-2 group-hover:text-blue-100 transition-colors duration-300">
-                        {step.title}
-                      </h4>
-                      <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                        {step.description}
-                      </p>
-                    </div>
+                    </Link>
                   ))}
                 </div>
 
